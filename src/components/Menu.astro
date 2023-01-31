@@ -1,0 +1,63 @@
+---
+// Components
+import { Icon } from 'astro-icon';
+
+// Styles
+import '../styles/menu.css';
+
+// Props
+
+// Navigation active stylesheet
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<nav class="navbar">
+    <div class="nav">
+        <div class="navbar-logo">
+            <div class="logo">
+                <Icon name="logo"/>
+            </div>
+        </div>
+        <ul class="navbar-menu">
+            <li class="navbar-button">
+                <a class={currentPath === "" ? "active" : ""} href="/">
+                    <Icon class="icon" name="ri:home-8-fill"/>
+                    <span class="link-text home">Home</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "books" ? "active" : ""} href="/books">
+                    <Icon class="icon" name="wpf:books"/>
+                    <span class="link-text books">Books</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "news" ? "active" : ""} href="/news">
+                    <Icon class="icon" name="zondicons:announcement"/>
+                    <span class="link-text news">News</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "about" ? "active" : ""} href="/about">
+                    <Icon class="icon" name="mdi:about"/>
+                    <span class="link-text about">About Us</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "contact" ? "active" : ""} href="/contact">
+                    <Icon class="icon" name="ic:baseline-email"/>
+                    <span class="link-text contact">Contact Us</span>
+                </a>
+            </li>
+        </ul>
+        <div class="theme-toggle">
+            <input type="checkbox" name="theme-toggle" id="checkbox" class="checkbox">
+            <label for="checkbox" class="label">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+    </div>
+</nav>

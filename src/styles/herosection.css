@@ -1,0 +1,32 @@
+.hero {
+    position: relative;
+}
+
+.hero__content {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    z-index: 1000;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.hero__content > h2 {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.hero__cta {
+    z-index: 1000;
+    color: white;
+    background-color: #0000ff;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 3rem;
+}
+
+.hero__cta:hover {
+    color: #0000ff;
+    background-color: #fff;
+}

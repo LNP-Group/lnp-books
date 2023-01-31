@@ -1,0 +1,79 @@
+.header {
+    height: max-content;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #000;
+}
+
+.page-nav-list {
+    display: flex;
+}
+
+.page-list-button {
+    margin-right: .75rem;
+}
+
+[data-theme="dark"] .home {
+    background-color: #111;
+    color: #fff;
+}
+
+[data-theme="dark"] .header {
+    border-bottom: 2px solid #fff;
+}
+
+.esu {
+    padding: 20px;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.book {
+    padding: 5px;
+}
+
+.book > img {
+    border-radius: 25%;
+}
+
+@media screen and (min-width: 414px) {
+    .book-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.headline {
+    padding: 20px;
+    text-align: center;
+}
+
+.headline > h2 {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.esu > h3 {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.headline > p {
+    font-size: 0.5em;
+    color: grey;
+}
+
+.phase-title {
+    font-size: .75em;
+    color: grey;
+}
+
+.caption {
+    text-align: center;
+    color: grey;
+    font-style: italic;
+}

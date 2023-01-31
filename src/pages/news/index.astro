@@ -1,0 +1,31 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const title = "News";
+const description = "Welcome to the official blog of LNP Books.";
+const url = "https://www.google.com";
+const locale = "en-US";
+const image = "https://pixlr.com/images/index/remove-bg.webp";
+
+// CSS
+import '../../styles/global.css';
+import '../../styles/news.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+>
+<div class="news">
+	<div class="header">
+		<h1>News</h1>
+	</div>
+	<div id="main" class="main">
+	</div>
+</div>
+</MainLayout>

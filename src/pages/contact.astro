@@ -1,0 +1,58 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const title = "Contact Us";
+const description = "Welcome to the official website of LNP Books.";
+const url = "https://www.google.com";
+const locale = "en-US";
+const image = "https://pixlr.com/images/index/remove-bg.webp";
+
+// CSS
+import '../styles/global.css';
+import '../styles/contact.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+>
+	<div class="contact">
+		<div class="home">
+			<div class="header">
+				<h1>Contact</h1>
+			</div>
+		</div>
+		<div class="form-wrapper">
+			<h2 style="color: red;">Not yet implemented.</h2>
+			<form
+				action=""
+				method="post"
+			>
+				<label for="name">Name</label>
+				<input type="text" name="name" placeholder="First Name"/>
+				<label for="email">Email</label>
+				<input type="text" name="email" placeholder="Email address"/>
+				<label for="subject">Subject</label>
+				<input type="text" name="subject" placeholder="Subject"/>
+				<label for="message">Message</label>
+				<input type="text" name="message" placeholder="Message"/>
+				<button type="submit" onsubmit="onSubmit()">Send message</button>
+			</form>
+			<div class="thank-you">
+				<h3>Thank you for your message.</h3>
+				<p>We will try to get back to you as soon as possible.</p>
+			</div>
+		</div>
+	</div>
+	<script is:inline>
+
+		const formWrapper = document.querySelector('.form-wrapper');
+
+		function onSubmit() {}
+	</script>
+</MainLayout>
