@@ -7,6 +7,40 @@
     border-bottom: 2px solid #000;
 }
 
+.main {
+    padding: 20px;
+}
+
+.franchise {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 1.5rem;
+    font-weight: 700;
+}
+
+.franchise img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.franchise:hover {
+    background-color: rgba(0, 0, 0, 0.11);
+    color: blue;
+}
+
+
+[data-theme="dark"] .franchise:hover {
+    background-color: rgba(255, 255, 255, 0.11);
+}
+
+[data-theme="dark"] {
+    background-color: #111;
+    color: #fff;
+}
+
 
 [data-theme="dark"] .books {
     background-color: #111;
@@ -15,4 +49,8 @@
 
 [data-theme="dark"] .header {
     border-bottom: 2px solid #fff;
+}
+
+[data-theme="dark"] a {
+    color: #fff;
 }

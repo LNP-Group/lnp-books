@@ -1,6 +1,12 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 
+// Components
+import Book from "../../components/Book.astro";
+
+
+// SEO
+
 const title = "Books";
 const description = "Welcome to the official website of LNP Books.";
 const url = "https://www.google.com";
@@ -26,6 +32,11 @@ import '../../styles/books.css';
 		<h1>Books</h1>
 	</div>
 	<div id="main" class="main">
+		<a href="/books/esu" class="franchise">
+			<img src="/images/esu.png" alt="The Ethereal Superheores Universe" />
+			The Ethereal Superheroes Universe
+		</a>
+		<div class="books-list"></div>
 	</div>
 </div>
 </MainLayout>

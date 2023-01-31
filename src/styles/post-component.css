@@ -1,0 +1,45 @@
+.post-container {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(19, 0, 112);
+    border-top-left-radius: 3.5rem;
+    border-top-right-radius: 3.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.post-details {
+    display: grid;
+    grid-template-columns: 2fr .5fr;
+    padding: 10px;
+}
+
+.post-data h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+
+.description {
+    font-size: 10px;
+    color: grey;
+}
+
+.author {
+    font-size: 15px;
+    color: grey;
+}
+
+.post-link {
+    text-align: right;
+}
+
+.post-link > a {
+    padding: 5px;
+    background: #fff;
+    color: #0000ff;
+    border-radius: 1rem;
+}

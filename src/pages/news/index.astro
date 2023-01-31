@@ -1,6 +1,8 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 
+import Post from "../../components/Post.astro";
+
 const title = "News";
 const description = "Welcome to the official blog of LNP Books.";
 const url = "https://www.google.com";
@@ -26,6 +28,13 @@ import '../../styles/news.css';
 		<h1>News</h1>
 	</div>
 	<div id="main" class="main">
+		<Post
+			title="ESU Announced"
+			image="/images/esu-timeline.png"
+			description="LNP Books announces the first book franchise in its catalogue, the Ethereal Superheroes Universe."
+			author="Stelian Cioarec"
+			slug="/news/esu-announced"
+		/>
 	</div>
 </div>
 </MainLayout>

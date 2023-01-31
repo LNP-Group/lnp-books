@@ -1,0 +1,25 @@
+---
+
+// Components
+const { title, description, slug, author, image } = Astro.props; 
+
+// Style
+import '../styles/post-component.css'
+
+---
+
+<div class="post-container">
+    <div class="post-image">
+        <img src={image} alt={title} />
+    </div>
+    <div class="post-details">
+        <div class="post-data">
+            <h2>{title}</h2>
+            <p class="description">{description}</p>
+            <p class="author">By {author}</p>
+        </div>
+        <div class="post-link">
+            <a href={slug}>More</a>
+        </div>
+    </div>
+</div>
