@@ -36,7 +36,61 @@ import '../../styles/books.css';
 			<img src="/images/esu.png" alt="The Ethereal Superheores Universe" />
 			The Ethereal Superheroes Universe
 		</a>
-		<div class="books-list"></div>
+		<div class="books-list">
+			<div class="title">
+				<h2 class="slider-title">Phase One</h2>
+				<h3 class="slider-subtitle">The Ethereals</h3>
+			</div>
+			<div class="book-list">
+				<a href="/books/esu/purple-bolt">
+					<img src="/images/purple-bolt.png" alt="Purple Bolt" class="slider-image">
+				</a>
+				<a href="/books/esu/thor">
+					<img src="/images/thor.png" alt="Thor" class="slider-image">
+				</a>
+				<a href="/books/esu/madame-wilhelmina">
+					<img src="/images/madame-wilhelmina.png" alt="Madame Wilhelmina" class="slider-image">
+				</a>
+				<a href="/books/esu/doctor-hex">
+					<img src="/images/doctor-hex.png" alt="Doctor Hex" class="slider-image">
+				</a>
+				<a href="/books/esu/the-ghost">
+					<img src="/images/the-ghost.png" alt="The Ghost" class="slider-image">
+				</a>
+				<a href="/books/esu/the-ethereals">
+					<img src="/images/the-ethereals.png" alt="The Ethereals" class="slider-image">
+				</a>
+			</div>
+		</div>
 	</div>
 </div>
+<script type="text/javascript" is:inlin>
+	const slider = document.querySelector('.slider');
+	const leftHandle = document.querySelector('.left-handle');
+	const rightHandle = document.querySelector('.right-handle');
+	const sliderIndex = getComputedStyle(slider).getPropertyValue('--slider-index');
+
+	console.log(sliderIndex);
+
+	if (sliderIndex == 0) {
+		leftHandle.style.display = 'none';
+	}
+
+	if (slider.style.getProperty('--slider-index') == 1) {
+		rightHandle.style.display = 'none';
+	}
+
+	rightHandle.addEventListener('click', () => {
+		slider.setProperty('--slider-index', sliderIndex + 1);
+		leftHandle.style.display = 'flex';
+		slider.style.setProperty('transform', 'translateX(calc(-100% * var(--slider-index)))')
+	
+	});
+
+	leftHandle.addEventListener('click', () => {
+		slider.setProperty('--slider-index', sliderIndex - 1);
+		rightHandle.style.display = 'flex';
+		slider.style.setProperty('transform', 'translateX(0%)')
+	});
+</script>
 </MainLayout>

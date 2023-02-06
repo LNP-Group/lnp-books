@@ -135,7 +135,6 @@ h2 {
 
 
 
-
 @media screen and (max-width: 414px) {
     body {
         grid-template-columns: .2fr 1fr;

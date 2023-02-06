@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .header {
     height: max-content;
     padding: 1.5rem;
@@ -53,4 +57,30 @@
 
 [data-theme="dark"] a {
     color: #fff;
+}
+
+
+.book-list img {
+    width: 220px;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+.books-list {
+    position: relative;
+    overflow: hidden;
+    margin-left: .72rem;
+    margin-right: .72rem;
+}
+
+.title {
+    height: 2rem;
+    display: flex;
+    gap: .72rem;
+    align-items: center;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

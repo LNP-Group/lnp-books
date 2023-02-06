@@ -6,7 +6,7 @@ description: 'LNP Books announces the first book franchise in its catalogue, the
 author: 'Stelian Cioarec'
 image:
     url: '/images/esu-timeline.png' 
-    alt: 'The Astro logo with the word One.'
+    alt: 'The timeline of the ESU.'
 ---
 
 LNP Books announces the first book franchise in its catalogue, the Ethereal Superheroes Universe. Createed by Stelian Cioarec from LNP Books, the franchise will be a superhero universe, split into multiple books across several phases, all interconnecting together into a single timeline.

@@ -30,8 +30,10 @@ import '../styles/contact.css';
 		<div class="form-wrapper">
 			<h2 style="color: red;">Not yet implemented.</h2>
 			<form
-				action="contact.php"
+				name="contact"
 				method="post"
+				data-netlify="true"
+				action="/success"
 			>
 				<label for="name">Name</label>
 				<input type="text" name="name" placeholder="First Name"/>
@@ -43,10 +45,6 @@ import '../styles/contact.css';
 				<input type="text" name="message" placeholder="Message"/>
 				<button type="submit" onsubmit="onSubmit()">Send message</button>
 			</form>
-			<div class="thank-you">
-				<h3>Thank you for your message.</h3>
-				<p>We will try to get back to you as soon as possible.</p>
-			</div>
 		</div>
 	</div>
 	<script is:inline>
