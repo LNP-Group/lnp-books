@@ -1,0 +1,43 @@
+.error-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.error-404 .header {
+    margin-bottom: 2rem;
+}
+
+.error-404 .header h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.error-404 .main {
+    text-align: center;
+}
+
+.error-404 .main a {
+    color: #000;
+    text-decoration: underline;
+}
+
+[data-theme="dark"] {
+    background: #111;
+    color: #fff;
+}
+
+[data-theme="dark"] .error-404 .header h1 {
+    color: #fff;
+}
+
+[data-theme="dark"] .error-404 .main a {
+    color: #fff;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}

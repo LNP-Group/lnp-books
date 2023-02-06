@@ -1,16 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 
-const title = "About Us";
+const title = "Page not found";
 const description = "Welcome to the official website of LNP Books.";
-const url = "https://www.google.com";
+const url = "https://books.lnp-group.com";
 const locale = "en-US";
-const image = "https://pixlr.com/images/index/remove-bg.webp";
+const image = "/images/esu-timeline.png";
 export const aboutSlug = "about";
 
 // CSS
 import '../styles/global.css';
-import '../styles/about.css';
+import '../styles/404.css'
 
 
 ---
@@ -22,13 +22,14 @@ import '../styles/about.css';
 	locale={locale}
 	image={image}
 >
-<div class="about">
+<div class="error-404">
 	<div class="header">
-		<h1>Page not foun.</h1>
+		<h1>Page not found.</h1>
 	</div>
 	<div id="main" class="main">
 		The page you were trying to access does not exist.
 		<a href="/">Go back home</a>
 	</div>
 </div>
+
 </MainLayout>
