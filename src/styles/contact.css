@@ -13,11 +13,34 @@ form {
 }
 
 
-[data-theme="dark"] .contact {
+[data-theme="dark"] {
     background-color: #111;
     color: #fff;
 }
 
+form {
+    padding: 10px;
+}
+
+input {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #0000ff;
+    border-radius: 0.5rem;
+    background: none;
+}
+
 [data-theme="dark"] .header {
     border-bottom: 2px solid #fff;
+}
+
+form button {
+    width: max-content;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #0000ff;
+    border-radius: 0.5rem;
+    background: none;
+    color: #0000ff;
+    text-align: center;
 }

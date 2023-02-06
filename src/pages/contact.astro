@@ -28,7 +28,6 @@ import '../styles/contact.css';
 			</div>
 		</div>
 		<div class="form-wrapper">
-			<h2 style="color: red;">Not yet implemented.</h2>
 			<form
 				name="contact"
 				method="post"
@@ -43,14 +42,8 @@ import '../styles/contact.css';
 				<input type="text" name="subject" placeholder="Subject"/>
 				<label for="message">Message</label>
 				<input type="text" name="message" placeholder="Message"/>
-				<button type="submit" onsubmit="onSubmit()">Send message</button>
+				<button type="submit">Send message</button>
 			</form>
 		</div>
 	</div>
-	<script is:inline>
-
-		const formWrapper = document.querySelector('.form-wrapper');
-
-		function onSubmit() {}
-	</script>
 </MainLayout>
