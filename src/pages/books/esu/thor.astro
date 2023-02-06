@@ -1,0 +1,93 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+
+
+// SEO
+
+const title = "Thor | Ethereal Superheroes Universe";
+const description = "Thor, our Norse god of thunder has to deal with some problems that take place on Earth.";
+const url = "https://books.lnp-group.com/books/esu/thor";
+const locale = "en-US";
+const image = "/images/thor.png";
+
+// CSS
+import '../../../styles/global.css';
+import '../../../styles/book.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+>
+<div class="books">
+	<div class="header">
+		<h1>Thor</h1>
+	</div>
+	<div id="main" class="main">
+		<div class="book">
+            <div class="book-cover">
+                <img src="/images/thor.png" alt="Thor promotional image" />
+            </div>
+            <div class="book-info">
+                <p><span class="info-box">Title:</span> Thor</p>
+                <p><span class="info-box">Author:</span> Stelian Cioarec</p>
+                <p><span class="info-box">Synopsis:</span> <i>Thor, our Norse god of thunder has to deal with some problems that take place on Earth.</i></p>
+                <p><span class="info-box">Release Date:</span> TBA</p>
+                <p><span class="info-box">Page No.:</span> TBA</p>
+                <p><span class="info-box">Series:</span> <a href="/books/esu">Ethereal Superheroes Universe</a></p>
+            </div>
+            <div class="book-details">
+                <h2>Characters</h2>
+                <ul class="book-details-list">
+                    <li class="character">
+                        Thor
+                    </li>
+                </ul>
+                <h2>Locations</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Earth
+                    </li>
+                    <li>
+                        Asgard
+                    </li>
+                </ul>
+                <h2>Items</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Mjolnir
+                    </li>
+                </ul>
+                <h2>Links</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Socials
+                        <ul class="book-details-list">
+                            <li>
+                                <a href="https://www.instagram.com/ESUniverseThor/" target="_blank">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/ESUThor/" target="_blank">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/ESUThor/" target="_blank">
+                                    Twitter
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+</div>
+</MainLayout>

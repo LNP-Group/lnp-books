@@ -27,6 +27,60 @@ import '../styles/about.css';
 		<h1>About Us</h1>
 	</div>
 	<div id="main" class="main">
+		<div class="faq">
+			<h2>FAQ</h2>
+			<button class="accordion">What is LNP Books?</button>
+			<div class="panel">
+				<p>LNP Books is a publishing company that publishes books for the general public.</p>
+			</div>
+			<button class="accordion">What is the purpose of LNP Books?</button>
+			<div class="panel">
+				<p>The purpose of LNP Books is to publish books for the general public.</p>
+			</div>
+			<button class="accordion">What is the mission of LNP Books?</button>
+			<div class="panel">
+				<p>The mission of LNP Books is to publish books for the general public.</p>
+			</div>
+			<button class="accordion">What is the vision of LNP Books?</button>
+			<div class="panel">
+				<p>The vision of LNP Books is to publish books for the general public.</p>
+			</div>
+			<button class="accordion">Who runs LNP Books?</button>
+			<div class="panel">
+				<p>LNP Books is run by Stelian Cioarec.</p>
+			</div>
+			<button class="accordion">Where is LNP Books located?</button>
+			<div class="panel">
+				<p>LNP Books is located in the Romania.</p>
+			</div>
+			<button class="accordion">What franchises does LNP Books publish?</button>
+			<div class="panel">
+				<p>LNP Books publishes the following franchises: <a href="/books/esu">ESU</a>.</p>
+			</div>
+			<button class="accordion">What books does LNP Books publish?</button>
+			<div class="panel">
+				<p>LNP Books publishes the following <a href="/books/">books</a>.</p>
+			</div>
+			<button class="accordion">How do I contact LNP Books?</button>
+			<div class="panel">
+				<p>You can contact LNP Books through <a href="/contact/">this form</a>.</p>
+			</div>
+		</div>
 	</div>
 </div>
+<script is:inline>
+	// FAQ
+	const accordion = document.querySelectorAll(".accordion");
+	for (let i = 0; i < accordion.length; i++) {
+		accordion[i].addEventListener("click", function () {
+			this.classList.toggle("accordion-active");
+			const panel = this.nextElementSibling;
+			if (panel.style.display) {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		});
+	}
+</script>
 </MainLayout>

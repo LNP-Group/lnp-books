@@ -74,13 +74,49 @@ body {
 }
 
 .title {
-    height: 2rem;
     display: flex;
     gap: .72rem;
     align-items: center;
 }
 
+.phase {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.phase-name {
+    font-weight: 500;
+    font-size: 1em;
+    color: rgb(132, 132, 132);
+}
+
+
 .book-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.book {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.book > img {
+    border-radius: 25%;
+}
+
+.caption {
+    text-align: center;
+    color: grey;
+    font-style: italic;
+}
+
+@media screen and (min-width: 414px) {
+    .book-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

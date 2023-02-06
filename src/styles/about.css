@@ -8,11 +8,56 @@
 }
 
 
-[data-theme="dark"] .about {
+[data-theme="dark"] {
     background-color: #111;
     color: #fff;
 }
 
 [data-theme="dark"] .header {
     border-bottom: 2px solid #fff;
+}
+
+.about {
+    padding: 1.5rem;
+}
+
+.faq h2 {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.accordion {
+    margin: 1.5rem 0;
+    border-bottom: 2px solid #0000ff;
+    display: flex;
+    align-items: center;
+}
+
+.accordion::after {
+    content: "+";
+    float: right;
+    margin-left: 5px;
+    font-size: 1.5rem;
+}
+
+.accordion-active::after {
+    content: "-";
+}
+
+.panel {
+    display: none;
+}
+
+.panel a:hover {
+    color: #0000ff;
+}
+
+@media screen and (max-width: 768px) {
+    .panel a::after {
+        content: ">";
+        font-size: small;
+        float: top left;
+        margin-left: 5px;
+    }
 }
