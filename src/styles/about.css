@@ -49,6 +49,10 @@
     display: none;
 }
 
+.accordion-active + .panel {
+    display: block;
+}
+
 .panel a:hover {
     color: #0000ff;
 }
