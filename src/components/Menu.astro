@@ -27,25 +27,25 @@ const currentPath = pathname.slice(1); // remove the first "/"
                 </a>
             </li>
             <li class="navbar-button">
-                <a class={currentPath === "/books" ? "active" : ""} href="/books">
+                <a class={currentPath === "books/" ? "active" : ""} href="/books">
                     <Icon class="icon" name="wpf:books"/>
                     <span class="link-text books">Books</span>
                 </a>
             </li>
             <li class="navbar-button">
-                <a class={currentPath === "/news" ? "active" : ""} href="/news">
+                <a class={currentPath === "news/" ? "active" : ""} href="/news">
                     <Icon class="icon" name="zondicons:announcement"/>
                     <span class="link-text news">News</span>
                 </a>
             </li>
             <li class="navbar-button">
-                <a class={currentPath === "/about" ? "active" : ""} href="/about">
+                <a class={currentPath === "about/" ? "active" : ""} href="/about">
                     <Icon class="icon" name="mdi:about"/>
                     <span class="link-text about">About Us</span>
                 </a>
             </li>
             <li class="navbar-button">
-                <a class={currentPath === "/contact" ? "active" : ""} href="/contact">
+                <a class={currentPath === "contact/" ? "active" : ""} href="/contact">
                     <Icon class="icon" name="ic:baseline-email"/>
                     <span class="link-text contact">Contact Us</span>
                 </a>
