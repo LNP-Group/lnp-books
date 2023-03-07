@@ -1,40 +1,41 @@
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
+        <atom:link href="https://books.lnp-group.com/feed.rss" rel="self" type="application/rss+xml" />
         <title>LNP Books News</title>
         <link>https://books.lnp-group.com/news/</link>
         <description>Latest news from LNP Books</description>
         <language>en-us</language>
-        <lastBuildDate>Mon, 13 February 2023 10:00:00 +0200</lastBuildDate>
-        <pubDate>Mon, 13 February 2023 10:00:00 +0200</pubDate>
+        <lastBuildDate>Mon, 13 Feb 2023 10:00:00 EET</lastBuildDate>
+        <pubDate>Mon, 13 Feb 2023 10:00:00 EET</pubDate>
         <generator>HTML</generator>
-        <managingEditor>nutu_stelian@lnp-group.com</managingEditor>
-        <webMaster>contact@lnp-group.com</webMaster>
+        <managingEditor>nutu_stelian@lnp-group.com (Stelian Cioarec)</managingEditor>
+        <webMaster>contact@lnp-group.com (LNP Group)</webMaster>
         <docs>https://books.lnp-group.com/feed.rss</docs>
         <item>
             <title>ESU Announced</title>
             <link>https://books.lnp-group.com/news/esu-announced/</link>
             <description>LNP Books announces the first book franchise in its catalogue, the Ethereal Superheroes Universe.</description>
-            <pubDate>Tue, 31 January 2023 10:00:00 +0200</pubDate>
+            <pubDate>Tue, 31 Jan 2023 10:00:00 EET</pubDate>
             <guid>https://books.lnp-group.com/news/esu-announced/</guid>
             <image>
                 <url>https://books.lnp-group.com/images/esu-timeline.png</url>
                 <title>ESU Announced</title>
                 <link>https://books.lnp-group.com/news/esu-announced/</link>
             </image>
-            <author>Stelian Cioarec</author>
+            <author>nutu_stelian@lnp-group.com (Stelian Cioarec)</author>
         </item>
         <item>
             <title>New Purple Bolt Reveal</title>
             <link>https://books.lnp-group.com/news/new-purple-bolt-reveal-soon/</link>
             <description>LNP Books reveals that a new Purple Bolt announcement is coming soon.</description>
-            <pubDate>Mon, 13 February 2023 10:00:00 +0200</pubDate>
+            <pubDate>Mon, 13 Feb 2023 10:00:00 EET</pubDate>
             <guid>https://books.lnp-group.com/news/new-purple-bolt-reveal-soon/</guid>
             <image>
                 <url>https://books.lnp-group.com/images/purple-bolt-post.png</url>
                 <title>New Purple Bolt Reveal</title>
                 <link>https://books.lnp-group.com/news/new-purple-bolt-reveal-soon/</link>
             </image>
-            <author>Stelian Cioarec</author>
+            <author>nutu_stelian@lnp-group.com (Stelian Cioarec)</author>
         </item>
     </channel>
 </rss>
