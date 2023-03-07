@@ -1,0 +1,40 @@
+<rss version="2.0">
+    <channel>
+        <title>LNP Books News</title>
+        <link>https://books.lnp-group.com/news/</link>
+        <description>Latest news from LNP Books</description>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 13 February 2023 10:00:00 +0200</lastBuildDate>
+        <pubDate>Mon, 13 February 2023 10:00:00 +0200</pubDate>
+        <generator>HTML</generator>
+        <managingEditor>nutu_stelian@lnp-group.com</managingEditor>
+        <webMaster>contact@lnp-group.com</webMaster>
+        <docs>https://books.lnp-group.com/feed.rss</docs>
+        <item>
+            <title>ESU Announced</title>
+            <link>https://books.lnp-group.com/news/esu-announced/</link>
+            <description>LNP Books announces the first book franchise in its catalogue, the Ethereal Superheroes Universe.</description>
+            <pubDate>Tue, 31 January 2023 10:00:00 +0200</pubDate>
+            <guid>https://books.lnp-group.com/news/esu-announced/</guid>
+            <image>
+                <url>https://books.lnp-group.com/images/esu-timeline.png</url>
+                <title>ESU Announced</title>
+                <link>https://books.lnp-group.com/news/esu-announced/</link>
+            </image>
+            <author>Stelian Cioarec</author>
+        </item>
+        <item>
+            <title>New Purple Bolt Reveal</title>
+            <link>https://books.lnp-group.com/news/new-purple-bolt-reveal-soon/</link>
+            <description>LNP Books reveals that a new Purple Bolt announcement is coming soon.</description>
+            <pubDate>Mon, 13 February 2023 10:00:00 +0200</pubDate>
+            <guid>https://books.lnp-group.com/news/new-purple-bolt-reveal-soon/</guid>
+            <image>
+                <url>https://books.lnp-group.com/images/purple-bolt-post.png</url>
+                <title>New Purple Bolt Reveal</title>
+                <link>https://books.lnp-group.com/news/new-purple-bolt-reveal-soon/</link>
+            </image>
+            <author>Stelian Cioarec</author>
+        </item>
+    </channel>
+</rss>
