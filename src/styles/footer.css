@@ -16,11 +16,12 @@ footer {
 }
 
 .social-link > .fa-brands {
-    font-size: 40px;
+    font-size: 25px;
     margin-right: 8px;
 }
 
-.fa-facebook:hover {
+.fa-facebook:hover,
+.fa-facebook:focus {
     background: -webkit-linear-gradient(180deg, rgba(17,175,254,1) 0%, rgba(0,98,225,1) 100%);
     background: linear-gradient(180deg, rgba(17,175,254,1) 0%, rgba(0,98,225,1) 100%);
     -webkit-background-clip: text;
@@ -30,7 +31,8 @@ footer {
     background-clip: text;
 }
 
-.fa-instagram:hover {
+.fa-instagram:hover,
+.fa-instagram:focus {
     background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     -webkit-background-clip: text;
@@ -40,12 +42,52 @@ footer {
     background-clip: text;
 }
 
-.fa-twitter:hover {
+.fa-twitter:hover,
+.fa-twitter:focus {
     color: #1DA1F2;
 }
 
-.fa-youtube:hover {
+.fa-youtube:hover,
+.fa-youtube:focus {
     color: #FF0000;
+}
+
+.fa-square-snapchat:hover {
+    color: #FFFC00;
+}
+
+.tiktok {
+    position: relative;
+}
+
+.blue {
+    position: absolute;
+    top: -10px;
+    left: -2px;
+    color: #25F4EE;
+    z-index: -1;
+    opacity: .8;
+}
+
+.red {
+    position: absolute;
+    top: -7px;
+    left: 2px;
+    color: #FE2C55;
+    z-index: -1;
+    opacity: .8;
+}
+
+.tiktok:hover .blue {
+    animation: tiktokBlue 400ms infinite;
+}
+
+.tiktok:hover .red {
+    animation: tiktokRed 400ms infinite;
+}
+
+.tiktok:hover .fa-tiktok:not(.blue, .red) {
+    animation: tiktok 400ms infinite;
 }
 
 .container {
@@ -61,5 +103,51 @@ footer {
 @media screen and (max-width: 1280px) {
     footer {
         display: none;
+    }
+}
+
+@keyframes tiktok {
+    2%,64%{
+      opacity: .5;
+    }
+    4%,60%{
+      opacity: 1;
+    }
+    62%{
+       opacity: 0;
+  }
+}
+
+@keyframes tiktokBlue {
+    50% {
+        left: -2.5px;
+        top: -5px;
+    }
+
+    75% {
+        left: 2px;
+        top: -10px;
+    }
+
+    100% {
+        left: -2px;
+        top: -7px;
+    }
+}
+
+@keyframes tiktokRed {
+    50% {
+        left: 2.5px;
+        top: -5px;
+    }
+
+    75% {
+        left: -2px;
+        top: -10px;
+    }
+
+    100% {
+        left: 2px;
+        top: -7px;
     }
 }
