@@ -1,0 +1,178 @@
+.header {
+    height: max-content;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #000;
+}
+
+[data-theme="dark"] {
+    background-color: #111;
+    color: #fff;
+}
+
+.page-nav-list {
+    display: flex;
+}
+
+.page-list-button {
+    margin-right: .75rem;
+}
+
+[data-theme="dark"] .home {
+    background-color: #111;
+    color: #fff;
+}
+
+[data-theme="dark"] .header {
+    border-bottom: 2px solid #fff;
+}
+
+.esu {
+    padding: 20px;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.book {
+    padding: 5px;
+}
+
+.book > img {
+    border-radius: 25%;
+}
+
+@media screen and (min-width: 414px) {
+    .book-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.headline {
+    padding: 20px;
+    text-align: center;
+}
+
+.headline > h2 {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.esu > h3 {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.headline > p {
+    font-size: 0.5em;
+    color: grey;
+}
+
+.phase-title {
+    font-size: .75em;
+    color: grey;
+}
+
+.caption {
+    text-align: center;
+    color: grey;
+    font-style: italic;
+}
+
+[data-theme="dark"] select {
+    background-color: #111;
+    color: #fff;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #0000ff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    background: none;
+    color: #0000ff;
+}
+
+
+.section-title > .title {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.section-title > .subtitle {
+    font-size: 0.5em;
+    color: grey;
+}
+
+@media screen and (min-width: 414px) {
+    .form {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.required {
+    color: red;
+}
+
+.submit {
+    width: max-content;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    background: #0000ff;
+    color: #fff;
+}
+
+[data-theme="dark"] input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #0000ff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    background: none;
+    color: #0000ff;
+}
+
+.note::before {
+    content: "–>";
+    color: grey;
+    margin-right: 5px;
+}
+
+.note > a {
+    position: relative;
+    color: #0000ff;
+    transform-origin: left;
+    transition: text-decoration 0.2s ease-in-out;
+}
+
+.note > a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #0000ff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.note > a:hover::before {
+    transform: scaleX(1);
+}
