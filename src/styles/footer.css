@@ -17,7 +17,7 @@ footer {
 
 .social-link > .fa-brands {
     font-size: 25px;
-    margin-right: 8px;
+    margin-right: 5px;
 }
 
 .fa-facebook:hover,
@@ -150,4 +150,23 @@ footer {
         left: 2px;
         top: -7px;
     }
+}
+
+[astro-icon="lnp"] {
+    width: 22px !important;
+    margin-right: 5px !important;
+}
+
+[data-theme="dark"] [astro-icon="lnp"] {
+    color: #fff !important;
+}
+
+[astro-icon="lnp"]:hover,
+[astro-icon="lnp"]:focus {
+    color: #0000ff !important;
+}
+
+.footer-headline {
+    font-weight: 700;
+    font-size: 1.5em;
 }
