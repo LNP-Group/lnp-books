@@ -1,0 +1,40 @@
+---
+
+import { Icon } from "astro-icon";
+
+const { title, icon, expanded, content, image, alt, hidden, panelHeadingId, panelContentId, panelTitleId } = Astro.props;
+
+import '../styles/accordionpanel.css'
+
+---
+
+<div class="accordion-panel">
+    <h3 id={panelHeadingId}>
+        <button
+            class="accordion-trigger"
+            aria-controls={panelContentId}
+            aria-expanded={expanded}
+        >
+            <span class="accordion-title" id={panelTitleId}>
+                {title}
+            </span>
+            <Icon aria-hidden="true" class="accordion-icon" name={icon} />
+        </button>
+    </h3>
+    <div 
+        class="accordion-content" 
+        id={panelContentId}
+        aria-labelledby={panelHeadingId}
+        aria-hidden={hidden}
+        role="region"
+    >
+        <p>
+            {content}
+        </p>
+        <img
+            class="accordion-image"
+            src={image}
+            alt={alt}
+        />
+    </div>
+</div>

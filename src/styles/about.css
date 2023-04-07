@@ -17,8 +17,8 @@
     border-bottom: 2px solid #fff;
 }
 
-.about {
-    padding: 1.5rem;
+.faq {
+    padding: 20px;
 }
 
 .faq h2 {
@@ -28,40 +28,9 @@
 }
 
 .accordion {
-    margin: 1.5rem 0;
-    border-bottom: 2px solid #0000ff;
     display: flex;
-    align-items: center;
-}
+    flex-direction: column;
+    gap: 1rem;
 
-.accordion::after {
-    content: "+";
-    float: right;
-    margin-left: 5px;
-    font-size: 1.5rem;
-}
-
-.accordion-active::after {
-    content: "-";
-}
-
-.panel {
-    display: none;
-}
-
-.accordion-active + .panel {
-    display: block;
-}
-
-.panel a:hover {
-    color: #0000ff;
-}
-
-@media screen and (max-width: 768px) {
-    .panel a::after {
-        content: ">";
-        font-size: small;
-        float: top left;
-        margin-left: 5px;
-    }
+    contain: content;
 }

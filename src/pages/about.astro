@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import AccordionPanel from "../components/AccordionPanel.astro";
 
 const title = "About Us";
 const description = "Welcome to the official website of LNP Books.";
@@ -11,6 +12,7 @@ export const aboutSlug = "about";
 // CSS
 import '../styles/global.css';
 import '../styles/about.css';
+
 
 
 ---
@@ -29,52 +31,133 @@ import '../styles/about.css';
 	<div id="main" class="main">
 		<div class="faq">
 			<h2>FAQ</h2>
-			<button class="accordion">What is LNP Books?</button>
-			<div class="panel">
-				<p>LNP Books is a publishing company that publishes books for the general public.</p>
-			</div>
-			<button class="accordion">What is the purpose of LNP Books?</button>
-			<div class="panel">
-				<p>The purpose of LNP Books is to publish books for the general public.</p>
-			</div>
-			<button class="accordion">What is the mission of LNP Books?</button>
-			<div class="panel">
-				<p>The mission of LNP Books is to publish books for the general public.</p>
-			</div>
-			<button class="accordion">What is the vision of LNP Books?</button>
-			<div class="panel">
-				<p>The vision of LNP Books is to publish books for the general public.</p>
-			</div>
-			<button class="accordion">Who runs LNP Books?</button>
-			<div class="panel">
-				<p>LNP Books is run by Stelian Cioarec.</p>
-			</div>
-			<button class="accordion">Where is LNP Books located?</button>
-			<div class="panel">
-				<p>LNP Books is located in the Romania.</p>
-			</div>
-			<button class="accordion">What franchises does LNP Books publish?</button>
-			<div class="panel">
-				<p>LNP Books publishes the following franchises: <a href="/books/esu">ESU</a>.</p>
-			</div>
-			<button class="accordion">What books does LNP Books publish?</button>
-			<div class="panel">
-				<p>LNP Books publishes the following <a href="/books/">books</a>.</p>
-			</div>
-			<button class="accordion">How do I contact LNP Books?</button>
-			<div class="panel">
-				<p>You can contact LNP Books through <a href="/contact/">this form</a>.</p>
+			<div class="accordion">
+				<AccordionPanel
+					title="What is LNP Books?"
+					icon="one"
+					content="LNP Books is a book-publishing company owned by LNP Group."
+					expanded="true"
+					hidden="false"
+					image="/images/esu.png"
+					alt="Ethereal Superheroes Universe"
+					panelHeadingId="panel1-heading"
+					panelContentId="panel1-content"
+					panelTitleId="panel1-title"
+				/>
+				<AccordionPanel
+					title="Who owns LNP Books?"
+					icon="two"
+					content="LNP Books is owned by Stelian Cioarec."
+					expanded="false"
+					hidden="true"
+					image="/images/purple-bolt.png"
+					alt="Purple Bolt"
+					panelHeadingId="panel2-heading"
+					panelContentId="panel2-content"
+					panelTitleId="panel2-title"
+				/>
+				<AccordionPanel
+					title="What franchises does LNP Books publish?"
+					icon="three"
+					content="LNP Books currently publishes only the Ethereal Superheroes Universe franchise."
+					expanded="false"
+					hidden="true"
+					image="/images/thor.png"
+					alt="Thor"
+					panelHeadingId="panel3-heading"
+					panelContentId="panel3-content"
+					panelTitleId="panel3-title"
+				/>
+				<AccordionPanel
+					title="Where can I buy LNP Books' titles?"
+					icon="four"
+					content="LNP Books' titles are currently available on Amazon, Apple Books and Google Play Books."
+					expanded="false"
+					hidden="true"
+					image="/images/madame-wilhelmina.png"
+					alt="Madame Wilhelmina"
+					panelHeadingId="panel4-heading"
+					panelContentId="panel4-content"
+					panelTitleId="panel4-title"
+				/>
+				<AccordionPanel
+					title="What is the Ethereal Superheroes Universe?"
+					icon="five"
+					content="The Ethereal Superheroes Universe is a superhero franchise created by Stelian Cioarec. It is a shared universe where all the characters are connected to each other in some way."
+					expanded="false"
+					hidden="true"
+					image="/images/doctor-hex.png"
+					alt="Doctor Hex"
+					panelHeadingId="panel5-heading"
+					panelContentId="panel5-content"
+					panelTitleId="panel5-title"
+				/>
+				<AccordionPanel
+					title="Can I preview LNP Books' titles?"
+					icon="six"
+					content="Yes, you can preview LNP Books' titles on Apple Books, Google Play Books and Wattpad. You can find all preview links on our website, on each book's page, once they are published."
+					expanded="false"
+					hidden="true"
+					image="/images/the-ghost.png"
+					alt="The Ghost"
+					panelHeadingId="panel6-heading"
+					panelContentId="panel6-content"
+					panelTitleId="panel6-title"
+				/>
+				<AccordionPanel
+					title="What authors does LNP Books publish?"
+					icon="seven"
+					content="LNP Books currently publishes only Stelian Cioarec's titles, with plans to expand."
+					expanded="false"
+					hidden="true"
+					image="/images/the-ethereals.png"
+					alt="The Ethereals"
+					panelHeadingId="panel7-heading"
+					panelContentId="panel7-content"
+					panelTitleId="panel7-title"
+				/>
+				<AccordionPanel
+					title="How do I contact LNP Books?"
+					icon="eight"
+					content="You can contact LNP Books by sending an email to us on our contact page."
+					expanded="false"
+					hidden="true"
+					image="/images/esu-timeline.png"
+					alt="Ethereal Superheroes Universe Timeline"
+					panelHeadingId="panel8-heading"
+					panelContentId="panel8-content"
+					panelTitleId="panel8-title"
+				/>
 			</div>
 		</div>
 	</div>
 </div>
 <script is:inline>
-	// FAQ
-	const accordion = document.querySelectorAll(".accordion");
-	for (let i = 0; i < accordion.length; i++) {
-		accordion[i].addEventListener("click", function () {
-			this.classList.toggle("accordion-active");
+	const accordion = document.querySelector('.accordion');
+	
+	accordion.addEventListener('click', (e) => {
+		const activePanel = e.target.closest('.accordion-panel');
+		if (!activePanel) return;
+		toggleAccordion(activePanel);
+	});
+
+	function toggleAccordion(panelToActivate) {
+
+		const buttons = panelToActivate.parentElement.querySelectorAll('button');
+		const contents = panelToActivate.parentElement.querySelectorAll('.accordion-content');
+
+		buttons.forEach((button) => {
+			button.setAttribute('aria-expanded', 'false');
 		});
+
+		contents.forEach((content) => {
+			content.setAttribute('aria-hidden', 'true');
+		});
+
+		panelToActivate.querySelector('button').setAttribute('aria-expanded', 'true');
+
+		panelToActivate.querySelector('.accordion-content').setAttribute('aria-hidden', 'false');
+
 	}
 </script>
 </MainLayout>

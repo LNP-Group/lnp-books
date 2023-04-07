@@ -27,7 +27,8 @@ nav {
 }
 
 .nav {
-    position: fixed;
+    position: sticky;
+    top: 1.5em;
 }
 
 .navbar-menu {
