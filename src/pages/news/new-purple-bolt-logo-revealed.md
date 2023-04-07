@@ -41,6 +41,7 @@ LNP Books is a publishing company that publishes books for children and young ad
     img[alt="Purple Bolt Book Cover"] {
         border-radius: 3.5rem;
         max-width: 40rem;
+        margin-inline: auto;
     }
 </style>
 

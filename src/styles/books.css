@@ -59,6 +59,30 @@ body {
     color: #fff;
 }
 
+.franchise-infobox {
+    display: grid;
+    grid-template-columns: .5fr 1.9fr;
+    gap: 1rem;
+}
+
+.franchise-image img {
+    width: 220px;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+.info-box {
+    font-weight: 690;
+}
+
+.franchise-info a:hover {
+    color: blue;
+}
+
+[data-theme="dark"] .franchise-info a:hover {
+    color: blue;
+}
+
 
 .book-list img {
     width: 220px;
@@ -119,4 +143,19 @@ body {
     .book-list {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .franchise-cover img {
+        width: 120px;
+    }
+    
+    .franchise-info-box {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
 }
