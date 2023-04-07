@@ -133,3 +133,19 @@ img {
         transition: transform 500ms 250ms, opacity 500ms 250ms;
     }
 }
+
+@media screen and (max-width: 768px) {
+
+    .accordion-panel {
+        --_panel-padding: 0.25rem;
+        --_panel-gap: .75rem;
+    }
+
+    .accordion-title {
+        font-size: .95rem;
+    }
+    
+    .accordion-panle:focus-within {
+        outline-offset: 2px;
+    }
+}
