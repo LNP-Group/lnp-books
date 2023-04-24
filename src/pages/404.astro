@@ -4,7 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 const title = "Page not found";
 const description = "Welcome to the official website of LNP Books.";
 const url = "https://books.lnp-group.com";
-const locale = "en-US";
+const locale = "en-GB";
 const image = "/images/esu-timeline.png";
 export const aboutSlug = "about";
 
@@ -21,6 +21,11 @@ import '../styles/404.scss'
 	url={url}
 	locale={locale}
 	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/",
+		"us": "https://books.lnp-group.com/en-us/",
+		"ro": "https://books.lnp-group.com/ro-ro/"
+	}}
 >
 <div class="error-404">
 	<div class="glitch-text">
