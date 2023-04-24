@@ -1,0 +1,38 @@
+---
+import MainLayout from "../../layouts/MainLayoutRo.astro";
+
+const title = "Pagina nu a fost găsită";
+const description = "Bun venit pe site-ul oficial al LNP Group.";
+const url = "https://books.lnp-group.com/ro/404";
+const locale = "ro-ro";
+const image = "/images/esu-timeline.png";
+
+// CSS
+import '../../styles/global.css';
+import '../../styles/404.scss'
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+>
+<div class="error-404">
+	<div class="glitch-text">
+		<div class="stack" style="--stacks: 3;">
+			<span style="--index: 0;">404</span>
+			<span style="--index: 1;">404</span>
+			<span style="--index: 2;">404</span>
+		</div>
+		<h2>Pagina nu a fost găsită</h2>
+		<p>Ne pare rău. Pagina nu există.</p>
+		<a href="/ro">Înapoi acasă</a>
+	</div>
+	<img class="logo-404" src="/favicon.svg" alt="LNP Books" />
+</div>
+
+</MainLayout>

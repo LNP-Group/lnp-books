@@ -4,7 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 const title = "Contact Us";
 const description = "Welcome to the official website of LNP Books.";
 const url = "https://books.lnp-group.com/contact";
-const locale = "en-US";
+const locale = "en-GB";
 const image = "/images/esu-timeline.png";
 
 // CSS
@@ -20,8 +20,13 @@ import '../styles/contact.css';
 	url={url}
 	locale={locale}
 	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/contact",
+		"us": "https://books.lnp-group.com/en-us/contact",
+		"ro": "https://books.lnp-group.com/ro-ro/contactați-ne"
+	}}
 >
-	<div class="contact">
+	<div class="contact-page">
 		<div class="home">
 			<div class="header">
 				<h1>Contact</h1>

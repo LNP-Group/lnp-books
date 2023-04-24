@@ -1,0 +1,55 @@
+---
+import MainLayout from "../../layouts/MainLayoutUs.astro";
+
+const title = "Pick your language";
+const description = "Welcome to the official website of LNP Books.";
+const url = "https://books.lnp-group.com/language";
+const locale = "en-US";
+const image = "/images/esu-timeline.png";
+
+// CSS
+import '../../styles/global.css';
+import '../../styles/language.css';
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/language",
+		"us": "https://books.lnp-group.com/us/language",
+		"ro": "https://books.lnp-group.com/ro/limbă"
+	}}
+>
+	<div class="language-page">
+		<div class="header">
+			<h1>Language</h1>
+		</div>
+		<div id="main" class="main">
+			<ul class="language-picker">
+                <li class="lang-item">
+                    <a class="lang-link" href="/">
+						<img alt="United Kingdom" class="lang-flag" src="http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg"/>
+                        English (Traditional)
+                    </a>
+                </li>
+				<li class="lang-item">
+					<a class="lang-link" href="/en-us">
+						<img alt="United States" class="lang-flag" src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"/>
+						English (Simplified)
+					</a>
+				</li>
+                <li class="lang-item">
+                    <a class="lang-link" href="/ro-ro">
+						<img alt="Romania" class="lang-flag" src="http://purecatamphetamine.github.io/country-flag-icons/3x2/RO.svg"/>
+                        Română
+                    </a>
+                </li>
+            </ul>
+		</div>
+	</div>
+</MainLayout>

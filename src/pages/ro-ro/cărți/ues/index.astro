@@ -1,0 +1,84 @@
+---
+import MainLayout from "../../../../layouts/MainLayoutRo.astro";
+
+
+// SEO
+
+const title = "Universul Eteric de Supereroi";
+const description = "Welcome to the official website of LNP Books.";
+const url = "https://books.lnp-group.com/ro-ro/cărți/ues";
+const locale = "ro-RO";
+const image = "/images/esu-timeline.png";
+
+// CSS
+import '../../../../styles/global.css';
+import '../../../../styles/books.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/books/esu",
+		"us": "https://books.lnp-group.com/en-us/books/esu",
+		"ro": "https://books.lnp-group.com/ro-ro/cărți/ues"
+	}}
+>
+<div class="books">
+	<div class="header">
+		<h1>Universul Eteric de Supereroi</h1>
+	</div>
+	<div id="main" class="main">
+		<div class="franchise-infobox">
+			<div class="franchise-image">
+				<img src="/images/esu.png" alt="ESU" />
+			</div>
+			<div class="franchise-info">
+				<p><span class="info-box">Titlu:</span> Universul Eteric de Supereroi</p>
+				<p><span class="info-box">Creator:</span> <a href="/ro-ro/autori/cioarec-stelian">Cioarec Stelian</a></p>
+				<p><span class="info-box">Dată de Lansare:</span> Sfârșitul Anului 2023</p>
+				<p><span class="info-box">Nr. de Faza:</span> 1</p>
+				<p><span class="info-box">Nr. de Cărți:</span> 6</p>
+				<p><span class="info-box">Webiste:</span> <a href="https://esufranchise.com" target="_blank">Website oficial</a></p>
+			</div>
+		</div>
+		<div class="books-list">
+			<div class="title">
+				<h2 class="phase">Faza Întâi</h2>
+				<h3 class="phase-name">Etericii</h3>
+			</div>
+			<div class="book-list">
+				<a class="book" href="/ro-ro/cărți/ues/fulgerul-violet">
+					<img src="/images/purple-bolt.png" alt="Fulgerul Violet" class="slider-image">
+					<p class="caption">Fulgerul Violet</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/thor">
+					<img src="/images/thor.png" alt="Thor" class="slider-image">
+					<p class="caption">Thor</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/madame-wilhelmina">
+					<img src="/images/madame-wilhelmina.png" alt="Madame Wilhelmina" class="slider-image">
+					<p class="caption">Madame Wilhelmina</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/doctor-hex">
+					<img src="/images/doctor-hex.png" alt="Doctor Hex" class="slider-image">
+					<p class="caption">Doctor Hex</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/fantoma">
+					<img src="/images/the-ghost.png" alt="Fantoma" class="slider-image">
+					<p class="caption">Fantoma</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/etericii">
+					<img src="/images/the-ethereals.png" alt="Etericii" class="slider-image">
+					<p class="caption">Etericii</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</MainLayout>

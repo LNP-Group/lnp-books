@@ -4,10 +4,9 @@ import AccordionPanel from "../components/AccordionPanel.astro";
 
 const title = "About Us";
 const description = "Welcome to the official website of LNP Books.";
-const url = "https://www.google.com";
-const locale = "en-US";
-const image = "https://pixlr.com/images/index/remove-bg.webp";
-export const aboutSlug = "about";
+const url = "https://books.lnp-group.com/about";
+const locale = "en-GB";
+const image = "/images/esu-timeline.png";
 
 // CSS
 import '../styles/global.css';
@@ -23,6 +22,11 @@ import '../styles/about.css';
 	url={url}
 	locale={locale}
 	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/about",
+		"us": "https://books.lnp-group.com/en-us/about",
+		"ro": "https://books.lnp-group.com/ro-ro/despre-noi"
+	}}
 >
 <div class="about">
 	<div class="header">

@@ -1,0 +1,75 @@
+---
+// Components
+import { Icon } from 'astro-icon';
+
+// Styles
+import '../styles/menu.css';
+
+// Props
+
+// Navigation active stylesheet
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<nav class="navbar">
+    <div class="nav">
+        <div class="navbar-logo">
+            <div class="logo">
+                <Icon name="logo"/>
+            </div>
+        </div>
+        <ul class="navbar-menu">
+            <li class="navbar-button">
+                <a class={currentPath === "en-us/" ? "active" : ""} href="/en-us">
+                    <Icon class="icon" name="ri:home-8-fill"/>
+                    <span class="link-text home">Home</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "en-us/authors/" ? "active" : ""} href="/en-us/authors">
+                    <Icon class="icon" name="mdi:account"/>
+                    <span class="link-text authors">Authors</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "en-us/books/" ? "active" : ""} href="/en-us/books">
+                    <Icon class="icon" name="wpf:books"/>
+                    <span class="link-text books">Books</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "en-us/news/" ? "active" : ""} href="/en-us/news">
+                    <Icon class="icon" name="zondicons:announcement"/>
+                    <span class="link-text news">News</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "en-us/about/" ? "active" : ""} href="/en-us/about">
+                    <Icon class="icon" name="mdi:about"/>
+                    <span class="link-text about">About Us</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "en-us/contact/" ? "active" : ""} href="/en-us/contact">
+                    <Icon class="icon" name="ic:baseline-email"/>
+                    <span class="link-text contact">Contact Us</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "en-us/language/" ? "active" : ""} href="/en-us/language">
+                    <Icon class="icon" name="ph:globe"/>
+                    <span class="link-text language">Language</span>
+                </a>
+            </li>
+        </ul>
+        <div class="theme-toggle">
+            <input type="checkbox" name="theme-toggle" id="checkbox" class="checkbox">
+            <label for="checkbox" class="label">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+    </div>
+</nav>

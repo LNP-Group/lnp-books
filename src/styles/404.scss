@@ -1,66 +1,135 @@
+
+
 .error-404 {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  perspective: 500px;
+  perspective-origin: 50% calc(50% - 150px);
+  overflow-x: hidden;
+}
 
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    perspective: 500px;
-    perspective-origin: 50% calc(50% - 150px);
-  }
+[data-theme="dark"] .error-404 {
+  background-color: #000;;
+  color: #fff;
+  
+}
 
-  [data-theme="dark"] .error-404 {
-    background-color: #000;;
+.glitch-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  a {
     color: #fff;
-    
-  }
-  
-  .scene {
-    position: relative;
-    transform-style: preserve-3d;
-  }
-  
-  .banner {
-    display: flex;
-    transform-style: preserve-3d;
-    animation: rotate 24s infinite linear;
-  }
-  
-  @keyframes rotate {
-    to { transform: rotateY(-360deg); }
-  }
-  
-  $width: 50px;
-  .panel {
-    position: absolute;
-    transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(190px); 
-    width: $width;
-    height: 120px;
-    // border: 1px solid white;
-    // background-color: #fff4;
-    overflow: hidden;
-  }
-  
-  .panel::before {
-    position: absolute;
-    left: var(--left);
-    content: "404: Page Not Found";
-    font-size: 96px;
-    width: max-content;
-    color: hsl(var(--hue), 75%, 75%);
-  }
-  
-  
-  @for $i from 0 to 24 {
-    .panel:nth-child(#{$i + 1}) {
-      --left: #{$width * $i * -1};
-      --hue: #{360 / 24 * $i};
-      --angle: #{360deg / 24 * $i};
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #00f;
     }
   }
-  
-  .screen {
-    position: absolute;
-    width: 400px; height: 400px;
-    // background-color: #000a;
-    background-image: linear-gradient(90deg, #000a, #0004, #000a);
-    transform: translate(-50%, -50%);
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stack span {
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: 4rem;
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
+}
+
+.stack span:nth-child(odd) { --glitch-translate: 8px; }
+.stack span:nth-child(even) { --glitch-translate: -8px; }
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  };
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
   }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  4%, 100% {  text-shadow: none; transform: none; }
+}
+
+.logo-404 {
+  --top: 0;
+  --left: 0;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+
+  -webkit-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  -moz-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  -o-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes moveX {
+  from { left: 0; } to { left: 100%; }
+}
+@-moz-keyframes moveX {
+  from { left: 0; } to { left: 90%; }
+}
+@-o-keyframes moveX {
+  from { left: 0; } to { left: 90%; }
+}
+@keyframes moveX {
+  from { left: 0; } to { left: 90%; }
+}
+
+@-webkit-keyframes moveY {
+  from { top: 0; } to { top: 85%; }
+}
+@-moz-keyframes moveY {
+  from { top: 0; } to { top: 85%; }
+}
+@-o-keyframes moveY {
+  from { top: 0; } to { top: 85%; }
+}
+@keyframes moveY {
+  from { top: 0; } to { top: 85%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-404 {
+    display: none;
+  }
+}

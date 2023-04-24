@@ -1,0 +1,59 @@
+---
+import MainLayout from "../../../layouts/MainLayoutRo.astro";
+
+import Post from "../../../components/PostRo.astro";
+
+const title = "Știri";
+const description = "Bine ați venit pe website-ul oficial al LNP Books";
+const url = "https://books.lnp-group.com/ro-ro/știri";
+const locale = "ro-RO";
+const image = "/images/esu-timeline.png";
+
+// CSS
+import '../../../styles/global.css';
+import '../../../styles/news.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/news",
+		"us": "https://books.lnp-group.com/en-us/news",
+		"ro": "https://books.lnp-group.com/ro-ro/știri"
+	}}
+>
+<div class="news">
+	<div class="header">
+		<h1>Știri</h1>
+	</div>
+	<div id="main" class="main">
+		<Post
+			title="UES anunțat"
+			image="/images/esu-timeline.png"
+			description="LNP Books anunță prima franciză din catalogul său de cărți, Universul Eteric de Supereroi."
+			author="Stelian Cioarec"
+			slug="/ro-ro/știri/ues-anunțat"
+		/>
+		<Post
+			title="Nou anunț despre Fulgerul Violet"
+			image="/images/purple-bolt-post.png"
+			description="LNP Books dezvăluie că un nou anunț despre Fulgerul Violet vine în curând."
+			author="Stelian Cioarec"
+			slug="/ro-ro/știri/nou-anunț-despre-fulgerul-violet"
+		/>
+		<Post
+			title="Nou logo pentru Fulgerul Violet dezvăluit"
+			image="/images/purple-bolt-post.png"
+			description="LNP Books dezvăluie noul logo pentru Fulgerul Violet."
+			author="Stelian Cioarec"
+			slug="/ro-ro/știri/nou-logo-pentru-fulgerul-violet-dezvăluit"
+		/>
+	</div>
+</div>
+</MainLayout>

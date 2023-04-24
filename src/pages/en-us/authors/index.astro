@@ -1,0 +1,49 @@
+---
+
+import MainLayout from "../../../layouts/MainLayoutUs.astro";
+
+// SEO
+const title = "Authors";
+const description = "Welcome to the official LNP Books website.";
+const url = "https://books.lnp-group.com/en-us/authors";
+const locale = "en-US";
+const image = "/images/esu-timeline.png";
+
+
+// CSS
+import '../../../styles/global.css';
+import '../../../styles/authors.css';
+
+
+---
+
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/authors",
+		"us": "https://books.lnp-group.com/en-us/authors",
+		"ro": "https://books.lnp-group.com/ro-ro/autori"
+	}}
+>
+
+<div class="authors-page">
+	<div class="header">
+		<h1>Authors</h1>
+	</div>
+    <div id="main" class="main">
+        <div class="author-list">
+            <a class="author" href="/en-us/authors/stelian-cioarec">
+                <img src="/images/authors/stelian-cioarec.jpg" alt="Stelian Cioarec" class="author-image" />
+                <p class="author-name">Stelian Cioarec</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+</MainLayout>
+    

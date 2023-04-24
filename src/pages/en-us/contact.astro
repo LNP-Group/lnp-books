@@ -1,0 +1,54 @@
+---
+import MainLayout from "../../layouts/MainLayoutUs.astro";
+
+const title = "Contact Us";
+const description = "Welcome to the official website of LNP Books.";
+const url = "https://books.lnp-group.com/en-us/contact";
+const locale = "en-US";
+const image = "/images/esu-timeline.png";
+
+// CSS
+import '../../styles/global.css';
+import '../../styles/contact.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/contact",
+		"us": "https://books.lnp-group.com/en-us/contact",
+		"ro": "https://books.lnp-group.com/ro-ro/contactați-ne"
+	}}
+>
+	<div class="contact-page">
+		<div class="home">
+			<div class="header">
+				<h1>Contact</h1>
+			</div>
+		</div>
+		<div class="form-wrapper">
+			<form
+				name="contact"
+				method="post"
+				data-netlify="true"
+				action="/en-us/success"
+			>
+				<label for="name">Name</label>
+				<input type="text" name="name" placeholder="First Name"/>
+				<label for="email">Email</label>
+				<input type="text" name="email" placeholder="Email address"/>
+				<label for="subject">Subject</label>
+				<input type="text" name="subject" placeholder="Subject"/>
+				<label for="message">Message</label>
+				<input type="text" name="message" placeholder="Message"/>
+				<button type="submit">Send message</button>
+			</form>
+		</div>
+	</div>
+</MainLayout>

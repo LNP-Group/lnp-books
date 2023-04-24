@@ -1,0 +1,95 @@
+---
+
+import MainLayout from "../../../layouts/MainLayoutRo.astro";
+
+// SEO
+const title = "Cioarec Stelian | Autori | LNP Books";
+const description = "Bun venit pe site-ul oficial LNP Books.";
+const url = "https://books.lnp-group.com/ro-ro/autori/cioarec-stelian";
+const locale = "ro-RO";
+const image = "/images/authos/stelian-cioarec.jpg";
+
+
+const authorBirthday = "2002-07-01";
+const joinDate = "2021-01-13";
+
+const date = new Date(authorBirthday.slice(0,10)).toLocaleDateString("ro-ro", {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+});
+
+const relativeTime = new Intl.RelativeTimeFormat("ro-ro", { numeric: "auto" });
+
+const joinDateRelative = relativeTime.format(
+    new Date(joinDate.slice(0,10)).getFullYear() - new Date().getFullYear(),
+    "year"
+);
+
+// CSS
+import '../../../styles/global.css';
+import '../../../styles/author.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/authors/stelian-cioarec",
+		"us": "https://books.lnp-group.com/en-us/authors/stelian-cioarec",
+		"ro": "https://books.lnp-group.com/ro-ro/autori/cioarec-stelian",
+	}}
+>
+    <div class="author">
+        <div class="header">
+            <h1>Cioarec Stelian</h1>
+        </div>
+        <div class="main">
+            <div class="author-infobox">
+                <img src="/images/authors/stelian-cioarec.jpg" alt="Cioarec Stelian" />
+                <div class="author-info">
+					<p><span class="infobox-section-title">Nume de familie</span>: Cioarec</p>
+                    <p><span class="infobox-section-title">Prenume</span>: Stelian</p>
+                    <p><span class="infobox-section-title">Data de naștere</span>: {date}</p>
+                    <p><span class="infobox-section-title">Autor a</span>: <a href="/ro-ro/cărți/ues">Universul Eteric de Supereroi</a></p>
+                    <p><span class="infobox-section-title">S-a alăturat LNP Books</span>: {joinDateRelative}</p>
+                </div>
+            </div>
+            <hr/>
+            <div class="title">
+				<h2 class="phase">Lucrări</h2>
+			</div>
+            <div class="book-list">
+				<a class="book" href="/ro-ro/cărți/ues/fulgerul-violet">
+					<img src="/images/purple-bolt.png" alt="Fulgerul Violet" class="slider-image">
+					<p class="caption">Fulgerul Violet</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/thor">
+					<img src="/images/thor.png" alt="Thor" class="slider-image">
+					<p class="caption">Thor</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/madame-wilhelmina">
+					<img src="/images/madame-wilhelmina.png" alt="Madame Wilhelmina" class="slider-image">
+					<p class="caption">Madame Wilhelmina</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/doctor-hex">
+					<img src="/images/doctor-hex.png" alt="Doctor Hex" class="slider-image">
+					<p class="caption">Doctor Hex</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/fantoma">
+					<img src="/images/the-ghost.png" alt="Fantoma" class="slider-image">
+					<p class="caption">Fantoma</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/etericii">
+					<img src="/images/the-ethereals.png" alt="Etericii" class="slider-image">
+					<p class="caption">Etericii</p>
+				</a>
+			</div>
+        </div>
+    </div>
+</MainLayout>

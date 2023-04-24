@@ -1,0 +1,101 @@
+---
+import MainLayout from "../../../../layouts/MainLayoutRo.astro";
+
+
+// SEO
+
+const title = "Fantoma | Universul Eteric de Supereroi";
+const description = "Un criminal trebuie să lupte cu infractori în lumea reală, după moartea sa, ca pedeapsă pentru crimele sale de la Lucifer.";
+const url = "https://books.lnp-group.com/ro-ro/cărți/fantoma";
+const locale = "ro-RO";
+const image = "/images/the-ghost.png";
+
+// CSS
+import '../../../../styles/global.css';
+import '../../../../styles/book.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+    alternateUrls={{
+		"en": "https://books.lnp-group.com/books/esu/the-ghost",
+		"us": "https://books.lnp-group.com/en-us/books/esu/the-ghost",
+		"ro": "https://books.lnp-group.com/ro-ro/cărți/ues/fantoma"
+	}}
+>
+<div class="books">
+	<div class="header">
+		<h1>Fantoma</h1>
+	</div>
+	<div id="main" class="main">
+		<div class="book">
+            <div class="book-cover">
+                <img src="/images/the-ghost.png" alt="The Ghost promotional image" />
+            </div>
+            <div class="book-info">
+                <p><span class="info-box">Titlu:</span> Fantoma</p>
+                <p><span class="info-box">Autor:</span> <a href="/ro-ro/autori/cioarec-stelian">Cioarec Stelian</a></p>
+                <p><span class="info-box">Synopsis:</span> <i>Un criminal trebuie să lupte cu infractori în lumea reală, după moartea sa, ca pedeapsă pentru crimele sale de la Lucifer.</i></p>
+                <p><span class="info-box">Dată de Lansare:</span> AFA</p>
+                <p><span class="info-box">Nr. de Pagini:</span> AFA</p>
+                <p><span class="info-box">Serie:</span> <a href="/ro-ro/cărți/ues">Universul Eteric de Supereroi</a></p>
+            </div>
+            <div class="book-details">
+                <h2>Personaje</h2>
+                <ul class="book-details-list">
+                    <li class="character">
+                        Fantoma
+                    </li>
+                    <li class="character">
+                        Lucifer
+                    </li>
+                </ul>
+                <h2>Locații</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Pământul
+                    </li>
+                    <li>
+                        Iadul
+                    </li>
+                </ul>
+                <h2>Obiecte</h2>
+                <ul class="book-details-list">
+                    <li>
+                        În curând
+                    </li>
+                </ul>
+                <h2>Link-uri</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Link-uri sociale
+                        <ul class="book-details-list">
+                            <li>
+                                <a href="https://www.instagram.com/ESUTheGhost/" target="_blank">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/ESUTheGhost/" target="_blank">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/ESUTheGhost/" target="_blank">
+                                    Twitter
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+</div>
+</MainLayout>

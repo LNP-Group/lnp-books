@@ -1,0 +1,106 @@
+.author {
+    min-height: 100vh;
+}
+
+.main {
+    padding: 1.5rem;
+}
+
+.header {
+    height: max-content;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #000;
+}
+
+
+[data-theme="dark"] {
+    background-color: #111;
+    color: #fff;
+}
+
+[data-theme="dark"] .header {
+    border-bottom: 2px solid #fff;
+}
+
+.author-infobox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+    margin: 1.5rem 0;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.author-infobox img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.infobox-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+a:hover {
+    color: #00f;
+}
+
+@media (max-width: 768px) {
+    .author-infobox {
+        grid-template-columns: 1fr;
+    }
+
+    .author-infobox img {
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.title h2 {
+    font-weight: bold;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.book {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.book > img {
+    border-radius: 25%;
+}
+
+.caption {
+    text-align: center;
+    color: grey;
+    font-style: italic;
+}
+
+@media screen and (min-width: 414px) {
+    .book-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

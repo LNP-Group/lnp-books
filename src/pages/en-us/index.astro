@@ -1,0 +1,80 @@
+---
+import MainLayout from "../../layouts/MainLayoutUs.astro";
+import HeroSection from "../../components/HeroSection.astro";
+
+const title = "Home";
+const description = "Welcome to the official website of LNP Books.";
+const url = "https://books.lnp-group.com/en-us";
+const locale = "en-US";
+const image = "/images/esu-timeline.png";
+
+// CSS
+import '../../styles/global.css';
+import '../../styles/home.css';
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/",
+		"us": "https://books.lnp-group.com/en-us/",
+		"ro": "https://books.lnp-group.com/ro-ro/"
+	}}
+>
+	<div class="home">
+		<div class="header">
+			<h1>Home</h1>
+		</div>
+		<div id="main" class="main">
+			<HeroSection
+				title='New Purple Bolt Logo Revealed'
+				description='New Purple Bolt logo was revealed today.'
+				cta_url='/news/new-purple-bolt-logo-revealed'
+				cta='Learn More'
+				image='/images/purple-bolt-hero.png'
+			/>
+		</div>
+		<div id="esu" class="esu">
+			<div class="headline">
+				<h2>ESU</h2>
+				<p>ESU is a new book franchise published by LNP Books.</p>
+			</div>
+			<h3 class="phase">
+				Phase 1 <span class="phase-title">The Ethereals</span>
+			</h3>
+			<div class="book-list">
+				<div class="book">
+					<img src="/images/purple-bolt.png" alt="Purple Bolt">
+					<p class="caption">Purple Bolt</p>
+				</div>
+				<div class="book">
+					<img src="/images/thor.png" alt="Thor">
+					<p class="caption">Thor</p>
+				</div>
+				<div class="book">
+					<img src="/images/madame-wilhelmina.png" alt="Madame Wilhelmina">
+					<p class="caption">Madame Wilhelmina</p>
+				</div>
+				<div class="book">
+					<img src="/images/doctor-hex.png" alt="Doctor Hex">
+					<p class="caption">Doctor Hex</p>
+				</div>
+				<div class="book">
+					<img src="/images/the-ghost.png" alt="The Ghost">
+					<p class="caption">The Ghost</p>
+				</div>
+				<div class="book">
+					<img src="/images/the-ethereals.png" alt="The Ethereals">
+					<p class="caption">The Ethereals</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</MainLayout>
+
+

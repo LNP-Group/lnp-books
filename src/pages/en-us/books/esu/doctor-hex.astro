@@ -1,0 +1,90 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+
+
+// SEO
+
+const title = "Doctor Hex | Ethereal Superheroes Universe";
+const description = "An archaeologist is doomed with magic powers after touching a sacred artifact.";
+const url = "https://books.lnp-group.com/books/esu/doctor-hex";
+const locale = "en-US";
+const image = "/images/doctor-hex.png";
+
+// CSS
+import '../../../styles/global.css';
+import '../../../styles/book.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+>
+<div class="books">
+	<div class="header">
+		<h1>Doctor Hex</h1>
+	</div>
+	<div id="main" class="main">
+		<div class="book">
+            <div class="book-cover">
+                <img src="/images/doctor-hex.png" alt="Purple Bolt promotional image" />
+            </div>
+            <div class="book-info">
+                <p><span class="info-box">Title:</span> Doctor Hex</p>
+                <p><span class="info-box">Author:</span> Stelian Cioarec</p>
+                <p><span class="info-box">Synopsis:</span> <i>An archaeologist is doomed with magic powers after touching a sacred artifact.</i></p>
+                <p><span class="info-box">Release Date:</span> TBA</p>
+                <p><span class="info-box">Page No.:</span> TBA</p>
+                <p><span class="info-box">Series:</span> <a href="/books/esu">Ethereal Superheroes Universe</a></p>
+            </div>
+            <div class="book-details">
+                <h2>Characters</h2>
+                <ul class="book-details-list">
+                    <li class="character">
+                        Doctor Hex
+                    </li>
+                </ul>
+                <h2>Locations</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Earth
+                    </li>
+                </ul>
+                <h2>Items</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Unknown Object
+                    </li>
+                </ul>
+                <h2>Links</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Socials
+                        <ul class="book-details-list">
+                            <li>
+                                <a href="https://www.instagram.com/ESUDoctorHex/" target="_blank">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/ESUDoctorHex/" target="_blank">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/ESUDoctorHex/" target="_blank">
+                                    Twitter
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+</div>
+</MainLayout>

@@ -1,0 +1,75 @@
+---
+import MainLayout from "../../../layouts/MainLayoutRo.astro";
+
+
+// SEO
+
+const title = "Cărți";
+const description = "Bun venit pe site-ul oficial al LNP Books";
+const url = "https://books.lnp-group.com/ro-ro/cărți";
+const locale = "ro-RO";
+const image = "/images/esu-timeline.png";
+
+// CSS
+import '../../../styles/global.css';
+import '../../../styles/books.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/books",
+		"us": "https://books.lnp-group.com/en-us/books",
+		"ro": "https://books.lnp-group.com/ro-ro/cărți"
+	}}
+>
+<div class="books">
+	<div class="header">
+		<h1>Cărțit</h1>
+	</div>
+	<div id="main" class="main">
+		<a href="/ro-ro/cărți/ues" class="franchise">
+			<img src="/images/esu.png" alt="The Ethereal Superheores Universe" />
+			Universul Eteric de Supereroi
+		</a>
+		<div class="books-list">
+			<div class="title">
+				<h2 class="phase">Faza Întâi</h2>
+				<h3 class="phase-name">Etericii</h3>
+			</div>
+			<div class="book-list">
+				<a class="book" href="/ro-ro/cărți/ues/fulgerul-violet">
+					<img src="/images/purple-bolt.png" alt="Fulgerul Violet" class="slider-image">
+					<p class="caption">Fulgerul Violet</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/thor">
+					<img src="/images/thor.png" alt="Thor" class="slider-image">
+					<p class="caption">Thor</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/madame-wilhelmina">
+					<img src="/images/madame-wilhelmina.png" alt="Madame Wilhelmina" class="slider-image">
+					<p class="caption">Madame Wilhelmina</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/doctor-hex">
+					<img src="/images/doctor-hex.png" alt="Doctor Hex" class="slider-image">
+					<p class="caption">Doctor Hex</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/fantoma">
+					<img src="/images/the-ghost.png" alt="Fantoma" class="slider-image">
+					<p class="caption">Fantoma</p>
+				</a>
+				<a class="book" href="/ro-ro/cărți/ues/etericii">
+					<img src="/images/the-ethereals.png" alt="Etericii" class="slider-image">
+					<p class="caption">Etericii</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</MainLayout>

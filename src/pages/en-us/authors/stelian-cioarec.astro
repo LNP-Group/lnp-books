@@ -1,0 +1,95 @@
+---
+
+import MainLayout from "../../../layouts/MainLayoutUs.astro";
+
+// SEO
+const title = "Stelian Cioarec | Authors | LNP Books";
+const description = "Welcome to the official LNP Books website.";
+const url = "https://en-us/books.lnp-group.com/en-us/authors/stelian-cioarec";
+const locale = "en-US";
+const image = "/images/authos/stelian-cioarec.jpg";
+
+
+const authorBirthday = "2002-07-01";
+const joinDate = "2021-01-13";
+
+const date = new Date(authorBirthday.slice(0,10)).toLocaleDateString("en-us", {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+});
+
+const relativeTime = new Intl.RelativeTimeFormat("en-us", { numeric: "auto" });
+
+const joinDateRelative = relativeTime.format(
+    new Date(joinDate.slice(0,10)).getFullYear() - new Date().getFullYear(),
+    "year"
+);
+
+// CSS
+import '../../../styles/global.css';
+import '../../../styles/author.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://en-us/books.lnp-group.com/authors/stelian-cioarec",
+		"us": "https://en-us/books.lnp-group.com/en-us/authors/stelian-cioarec",
+		"ro": "https://en-us/books.lnp-group.com/ro-ro/autori/cioarec-stelian",
+	}}
+>
+    <div class="author">
+        <div class="header">
+            <h1>Stelian Cioarec</h1>
+        </div>
+        <div class="main">
+            <div class="author-infobox">
+                <img src="/images/authors/stelian-cioarec.jpg" alt="Stelian Cioarec" />
+                <div class="author-info">
+                    <p><span class="infobox-section-title">First Name</span>: Stelian</p>
+                    <p><span class="infobox-section-title">Last Name</span>: Cioarec</p>
+                    <p><span class="infobox-section-title">Birthday</span>: {date}</p>
+                    <p><span class="infobox-section-title">Writing</span>: <a href="/en-us/books/esu">Ethereal Superheroes Franchise</a></p>
+                    <p><span class="infobox-section-title">Joined LNP Books</span>: {joinDateRelative}</p>
+                </div>
+            </div>
+            <hr/>
+            <div class="title">
+				<h2 class="phase">Work</h2>
+			</div>
+            <div class="book-list">
+				<a class="book" href="/en-us/books/esu/purple-bolt">
+					<img src="/images/purple-bolt.png" alt="Purple Bolt" class="slider-image">
+					<p class="caption">Purple Bolt</p>
+				</a>
+				<a class="book" href="/en-us/books/esu/thor">
+					<img src="/images/thor.png" alt="Thor" class="slider-image">
+					<p class="caption">Thor</p>
+				</a>
+				<a class="book" href="/en-us/books/esu/madame-wilhelmina">
+					<img src="/images/madame-wilhelmina.png" alt="Madame Wilhelmina" class="slider-image">
+					<p class="caption">Madame Wilhelmina</p>
+				</a>
+				<a class="book" href="/en-us/books/esu/doctor-hex">
+					<img src="/images/doctor-hex.png" alt="Doctor Hex" class="slider-image">
+					<p class="caption">Doctor Hex</p>
+				</a>
+				<a class="book" href="/en-us/books/esu/the-ghost">
+					<img src="/images/the-ghost.png" alt="The Ghost" class="slider-image">
+					<p class="caption">The Ghost</p>
+				</a>
+				<a class="book" href="/en-us/books/esu/the-ethereals">
+					<img src="/images/the-ethereals.png" alt="The Ethereals" class="slider-image">
+					<p class="caption">The Ethereals</p>
+				</a>
+			</div>
+        </div>
+    </div>
+</MainLayout>

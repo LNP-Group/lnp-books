@@ -1,0 +1,143 @@
+---
+import MainLayout from "../../../../layouts/MainLayoutUs.astro";
+
+
+// SEO
+
+const title = "Purple Bolt | Ethereal Superheroes Universe";
+const description = "An 18-year-old student gets superpowers after an experiment conducted by his father.";
+const url = "https://books.lnp-group.com/books/esu/purple-bolt";
+const locale = "en-US";
+const image = "/images/purple-bolt.png";
+
+// CSS
+import '../../../../styles/global.css';
+import '../../../../styles/book.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+    alternateUrls={{
+		"en": "https://books.lnp-group.com/books/esu/purple-bolt",
+		"us": "https://books.lnp-group.com/en-us/books/esu/purple-bolt",
+		"ro": "https://books.lnp-group.com/ro-ro/cărți/ues/fulgerul-violet"
+	}}
+>
+<div class="books">
+	<div class="header">
+		<h1>Purple Bolt</h1>
+	</div>
+	<div id="main" class="main">
+		<div class="book">
+            <div class="book-cover">
+                <img src="/images/purple-bolt-cover.png" alt="Purple Bolt Cover" />
+            </div>
+            <div class="book-info">
+                <p><span class="info-box">Title:</span> Purple Bolt</p>
+                <p><span class="info-box">Author:</span> <a href="/en-us/authors/stelian-cioarec">Stelian Cioarec</a></p>
+                <p><span class="info-box">Synopsis:</span> <i>An 18-year-old student gets superpowers after an experiment conducted by his father.</i></p>
+                <p><span class="info-box">Release Date:</span> Late 2023</p>
+                <p><span class="info-box">Page No.:</span> TBA</p>
+                <p><span class="info-box">Series:</span> <a href="/en-us/books/esu">Ethereal Superheroes Universe</a></p>
+            </div>
+            <div class="book-details">
+                <h2>Characters</h2>
+                <ul class="book-details-list">
+                    <li class="character">
+                        Jonathan Kayne <small>(Purple Bolt)</small>
+                    </li>
+                    <li class="character">
+                        Peter Kayne <small>(Jonathan's Father)</small>
+                    </li>
+                    <li class="character">
+                        Emily Kayne <small>(Jonathan's Mother)</small>
+                    </li>
+                </ul>
+                <h2>Locations</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Earth
+                        <ul class="book-details-list">
+                            <li>
+                                North America
+                                <ul class="book-details-list">
+                                    <li>
+                                        United States
+                                        <ul class="book-details-list">
+                                            <li>
+                                                Phebridge City
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2>Items</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Purple Bolt's Suit
+                    </li>
+                </ul>
+                <h2>Links</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Official ESU Webste.
+                        <ul class="book-details-list">
+                            <li>
+                                <a href="https://www.esufranchise.com/books/purple-bolt" target="_blank">
+                                    Purple Bolt
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="book-details-list">
+                    <li>
+                        Preview book
+                        <ul class="book-details-list">
+                            <li>
+                                <a href="https://play.google.com/store/books/details?id=B7yZEAAAQBAJ" target="_blank">
+                                    Google Play Books
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://apple.co/3WMBSmj" target="_blank">
+                                    Apple Books
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Socials
+                        <ul class="book-details-list">
+                            <li>
+                                <a href="https://www.instagram.com/ESUPurpleBolt/" target="_blank">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/ESUPurpleBolt/" target="_blank">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/ESUPurpleBolt/" target="_blank">
+                                    Twitter
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+</div>
+</MainLayout>

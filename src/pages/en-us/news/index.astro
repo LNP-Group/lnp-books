@@ -1,0 +1,59 @@
+---
+import MainLayout from "../../../layouts/MainLayoutUs.astro";
+
+import Post from "../../../components/Post.astro";
+
+const title = "News";
+const description = "Welcome to the official website of LNP Books.";
+const url = "https://books.lnp-group.com/en-us/news";
+const locale = "en-US";
+const image = "/images/esu-timeline.png";
+
+// CSS
+import '../../../styles/global.css';
+import '../../../styles/news.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	lternateUrls={{
+		"en": "https://books.lnp-group.com/news",
+		"us": "https://books.lnp-group.com/en-us/news",
+		"ro": "https://books.lnp-group.com/ro-ro/știri"
+	}}
+>
+<div class="news">
+	<div class="header">
+		<h1>News</h1>
+	</div>
+	<div id="main" class="main">
+		<Post
+			title="ESU Announced"
+			image="/images/esu-timeline.png"
+			description="LNP Books announces the first book franchise in its catalogue, the Ethereal Superheroes Universe."
+			author="Stelian Cioarec"
+			slug="/en-us/news/esu-announced"
+		/>
+		<Post
+			title="New Purple Bolt reveal"
+			image="/images/purple-bolt-post.png"
+			description="LNP Books reveals that a new Purple Bolt announcement is coming soon."
+			author="Stelian Cioarec"
+			slug="/en-us/news/new-purple-bolt-reveal-soon"
+		/>
+		<Post
+			title="New Purple Bolt Logo Revealed"
+			image="/images/purple-bolt-post.png"
+			description="LNP Books reveals the official Purple Bolt logo."
+			author="Stelian Cioarec"
+			slug="/en-us/news/new-purple-bolt-logo-revealed"
+		/>
+	</div>
+</div>
+</MainLayout>

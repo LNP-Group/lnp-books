@@ -11,7 +11,7 @@ import '../styles/post.css';
 const { frontmatter } = Astro.props;
 
 
-const date = new Date(frontmatter.pubDate.slice(0,10)).toLocaleDateString("en-us", {
+const date = new Date(frontmatter.pubDate.slice(0,10)).toLocaleDateString("en-gb", {
     year: 'numeric',
     month: 'short',
     day: 'numeric'

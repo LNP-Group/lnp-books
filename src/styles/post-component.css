@@ -42,4 +42,23 @@
     background: #fff;
     color: #0000ff;
     border-radius: 1rem;
+    transition: all .5s ease-in-out;
+}
+
+.post-link > a:hover {
+    background: #0000ff;
+    color: #fff;
+}
+
+[data-theme="dark"] .post-link > a {
+    padding: 5px;
+    background: #fff;
+    color: #0000ff;
+    border-radius: 1rem;
+    transition: all .5s ease-in-out;
+}
+
+[data-theme="dark"] .post-link > a:hover {
+    background: #0000ff;
+    color: #fff;
 }

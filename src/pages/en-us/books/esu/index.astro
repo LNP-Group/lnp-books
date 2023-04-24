@@ -1,0 +1,84 @@
+---
+import MainLayout from "../../../../layouts/MainLayoutUs.astro";
+
+
+// SEO
+
+const title = "Ethereal Superheroes Universe";
+const description = "Welcome to the official website of LNP Books.";
+const url = "https://books.lnp-group.com/books/esu";
+const locale = "en-US";
+const image = "/images/esu-timeline.png";
+
+// CSS
+import '../../../../styles/global.css';
+import '../../../../styles/books.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/books/esu",
+		"us": "https://books.lnp-group.com/en-us/books/esu",
+		"ro": "https://books.lnp-group.com/ro-ro/cărți/ues"
+	}}
+>
+<div class="books">
+	<div class="header">
+		<h1>The Ethereal Superheroes Universe</h1>
+	</div>
+	<div id="main" class="main">
+		<div class="franchise-infobox">
+			<div class="franchise-image">
+				<img src="/images/esu.png" alt="ESU" />
+			</div>
+			<div class="franchise-info">
+				<p><span class="info-box">Title:</span> Ethereal Superheroes Universe</p>
+				<p><span class="info-box">Creator:</span> <a href="/en-us/authors/stelian-cioarec">Stelian Cioarec</a></p>
+				<p><span class="info-box">Release Date:</span> Late 2023</p>
+				<p><span class="info-box">Phase No.:</span> 1</p>
+				<p><span class="info-box">Books No.:</span> 6</p>
+				<p><span class="info-box">Webiste:</span> <a href="https://esufranchise.com" target="_blank">Official website</a></p>
+			</div>
+		</div>
+		<div class="books-list">
+			<div class="title">
+				<h2 class="phase">Phase One</h2>
+				<h3 class="phase-name">The Ethereals</h3>
+			</div>
+			<div class="book-list">
+				<a class="book" href="/en-us/books/esu/purple-bolt">
+					<img src="/images/purple-bolt.png" alt="Purple Bolt" class="slider-image">
+					<p class="caption">Purple Bolt</p>
+				</a>
+				<a class="book" href="/en-us/books/esu/thor">
+					<img src="/images/thor.png" alt="Thor" class="slider-image">
+					<p class="caption">Thor</p>
+				</a>
+				<a class="book" href="/en-us/books/esu/madame-wilhelmina">
+					<img src="/images/madame-wilhelmina.png" alt="Madame Wilhelmina" class="slider-image">
+					<p class="caption">Madame Wilhelmina</p>
+				</a>
+				<a class="book" href="/en-us/books/esu/doctor-hex">
+					<img src="/images/doctor-hex.png" alt="Doctor Hex" class="slider-image">
+					<p class="caption">Doctor Hex</p>
+				</a>
+				<a class="book" href="/en-us/books/esu/the-ghost">
+					<img src="/images/the-ghost.png" alt="The Ghost" class="slider-image">
+					<p class="caption">The Ghost</p>
+				</a>
+				<a class="book" href="/en-us/books/esu/the-ethereals">
+					<img src="/images/the-ethereals.png" alt="The Ethereals" class="slider-image">
+					<p class="caption">The Ethereals</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</MainLayout>

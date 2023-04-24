@@ -1,0 +1,167 @@
+---
+import MainLayout from "../../layouts/MainLayoutRo.astro";
+import AccordionPanel from "../../components/AccordionPanel.astro";
+
+const title = "Despre Noi";
+const description = "Bine ați venit pe website-ul oficial al LNP Books";
+const url = "https://books.lnp-group.com/ro-ro/despre-noi";
+const locale = "ro-RO";
+const image = "/images/esu-timeline.png";
+
+// CSS
+import '../../styles/global.css';
+import '../../styles/about.css';
+
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/about",
+		"us": "https://books.lnp-group.com/en-us/about",
+		"ro": "https://books.lnp-group.com/ro-ro/despre-noi"
+	}}
+>
+<div class="about">
+	<div class="header">
+		<h1>Despre Noi</h1>
+	</div>
+	<div id="main" class="main">
+		<div class="faq">
+			<h2>FAQ</h2>
+			<div class="accordion">
+				<AccordionPanel
+					title="Ce este LNP Books?"
+					icon="one"
+					content="LNP Books este o editură de cărți deținută de LNP Group."
+					expanded="true"
+					hidden="false"
+					image="/images/esu.png"
+					alt="Ethereal Superheroes Universe"
+					panelHeadingId="panel1-heading"
+					panelContentId="panel1-content"
+					panelTitleId="panel1-title"
+				/>
+				<AccordionPanel
+					title="Cine deține LNP Books?"
+					icon="two"
+					content="LNP Books e deținută de Cioarec Stelian."
+					expanded="false"
+					hidden="true"
+					image="/images/purple-bolt.png"
+					alt="Purple Bolt"
+					panelHeadingId="panel2-heading"
+					panelContentId="panel2-content"
+					panelTitleId="panel2-title"
+				/>
+				<AccordionPanel
+					title="Ce francize publică LNP Books?"
+					icon="three"
+					content="LNP Books momentan publică doar franciza Universul Eteric de Supereroi."
+					expanded="false"
+					hidden="true"
+					image="/images/thor.png"
+					alt="Thor"
+					panelHeadingId="panel3-heading"
+					panelContentId="panel3-content"
+					panelTitleId="panel3-title"
+				/>
+				<AccordionPanel
+					title="Unde pot găsi cărțile LNP Books?"
+					icon="four"
+					content="Cărțile LNP Books pot fi găsite pe Apple Books, Google Play Books și Wattpad. Puteți găsi toate link-urile de preview pe website-ul nostru, pe pagina fiecărui titlu, odată cu lansarea lor."
+					expanded="false"
+					hidden="true"
+					image="/images/madame-wilhelmina.png"
+					alt="Madame Wilhelmina"
+					panelHeadingId="panel4-heading"
+					panelContentId="panel4-content"
+					panelTitleId="panel4-title"
+				/>
+				<AccordionPanel
+					title="Ce este Universul Eteric de Supereroi?"
+					icon="five"
+					content="Universul Eteric de Supereroi este o franciză de cărți de supereroi."
+					expanded="false"
+					hidden="true"
+					image="/images/doctor-hex.png"
+					alt="Doctor Hex"
+					panelHeadingId="panel5-heading"
+					panelContentId="panel5-content"
+					panelTitleId="panel5-title"
+				/>
+				<AccordionPanel
+					title="Pot să previzualizez cărțile LNP Books?"
+					icon="six"
+					content="Da, puteți să previzualizați cărțile LNP Books pe website-ul nostru, pe pagina fiecărui titlu, odată cu lansarea lor"
+					expanded="false"
+					hidden="true"
+					image="/images/the-ghost.png"
+					alt="The Ghost"
+					panelHeadingId="panel6-heading"
+					panelContentId="panel6-content"
+					panelTitleId="panel6-title"
+				/>
+				<AccordionPanel
+					title="Ce autori publică LNP Books?"
+					icon="seven"
+					content="LNP Books publică cărți scrise de Cioarec Stelian, cu planuri de extindere în viitor."
+					expanded="false"
+					hidden="true"
+					image="/images/the-ethereals.png"
+					alt="The Ethereals"
+					panelHeadingId="panel7-heading"
+					panelContentId="panel7-content"
+					panelTitleId="panel7-title"
+				/>
+				<AccordionPanel
+					title="Cum pot contacta LNP Books?"
+					icon="eight"
+					content="Puteți să ne contactați prin email pe pagina de contact."
+					expanded="false"
+					hidden="true"
+					image="/images/esu-timeline.png"
+					alt="Ethereal Superheroes Universe Timeline"
+					panelHeadingId="panel8-heading"
+					panelContentId="panel8-content"
+					panelTitleId="panel8-title"
+				/>
+			</div>
+		</div>
+	</div>
+</div>
+<script is:inline>
+	const accordion = document.querySelector('.accordion');
+	
+	accordion.addEventListener('click', (e) => {
+		const activePanel = e.target.closest('.accordion-panel');
+		if (!activePanel) return;
+		toggleAccordion(activePanel);
+	});
+
+	function toggleAccordion(panelToActivate) {
+
+		const buttons = panelToActivate.parentElement.querySelectorAll('button');
+		const contents = panelToActivate.parentElement.querySelectorAll('.accordion-content');
+
+		buttons.forEach((button) => {
+			button.setAttribute('aria-expanded', 'false');
+		});
+
+		contents.forEach((content) => {
+			content.setAttribute('aria-hidden', 'true');
+		});
+
+		panelToActivate.querySelector('button').setAttribute('aria-expanded', 'true');
+
+		panelToActivate.querySelector('.accordion-content').setAttribute('aria-hidden', 'false');
+
+	}
+</script>
+</MainLayout>

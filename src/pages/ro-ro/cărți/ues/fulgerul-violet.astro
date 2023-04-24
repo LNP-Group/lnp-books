@@ -1,0 +1,143 @@
+---
+import MainLayout from "../../../../layouts/MainLayoutRo.astro";
+
+
+// SEO
+
+const title = "Fulgerul Violet | Universul Eteric de Supereroi";
+const description = "Un student de 18 ani primește superputeri în urma unui experiment făcut de tatăl său.";
+const url = "https://books.lnp-group.com/ro-ro/cărți/ues/fulgerul-violet";
+const locale = "ro-RO";
+const image = "/images/purple-bolt.png";
+
+// CSS
+import '../../../../styles/global.css';
+import '../../../../styles/book.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+    alternateUrls={{
+		"en": "https://books.lnp-group.com/books/esu/purple-bolt",
+		"us": "https://books.lnp-group.com/en-us/books/esu/purple-bolt",
+		"ro": "https://books.lnp-group.com/ro-ro/cărți/ues/fulgerul-violet"
+	}}
+>
+<div class="books">
+	<div class="header">
+		<h1>Fulgerul Violet</h1>
+	</div>
+	<div id="main" class="main">
+		<div class="book">
+            <div class="book-cover">
+                <img src="/images/purple-bolt-cover.png" alt="Purple Bolt Cover" />
+            </div>
+            <div class="book-info">
+                <p><span class="info-box">Titlu:</span> Fulgerul Violet</p>
+                <p><span class="info-box">Autor:</span> <a href="/ro-ro/autori/cioarec-stelian">Cioarec Stelian</a></p>
+                <p><span class="info-box">Sinopsis:</span> <i>Un student de 18 ani primește superputeri în urma unui experiment făcut de tatăl său.</i></p>
+                <p><span class="info-box">Dată de lansare:</span> Sfârștul Anului 2023</p>
+                <p><span class="info-box">Nr. de Pagini:</span> AFA</p>
+                <p><span class="info-box">Serie:</span> <a href="/ro-ro/cărți/ues">Universul Eteric de Supereroi</a></p>
+            </div>
+            <div class="book-details">
+                <h2>Personaje</h2>
+                <ul class="book-details-list">
+                    <li class="character">
+                        Jonathan Kayne <small>(Fulgerul Violet)</small>
+                    </li>
+                    <li class="character">
+                        Peter Kayne <small>(Tatăl lui Jonathan)</small>
+                    </li>
+                    <li class="character">
+                        Emily Kayne <small>(Mama lui Jonathan)</small>
+                    </li>
+                </ul>
+                <h2>Locații</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Pământ
+                        <ul class="book-details-list">
+                            <li>
+                                America de Nord
+                                <ul class="book-details-list">
+                                    <li>
+                                        Statele Unite ale Americii
+                                        <ul class="book-details-list">
+                                            <li>
+                                                Phebridge City
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2>Items</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Costumul Fulgerului Violet
+                    </li>
+                </ul>
+                <h2>Links</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Site-ul oficial al UES
+                        <ul class="book-details-list">
+                            <li>
+                                <a href="https://www.esufranchise.com/books/purple-bolt" target="_blank">
+                                    Fulgerul Violet
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="book-details-list">
+                    <li>
+                        Previzualizează cartea
+                        <ul class="book-details-list">
+                            <li>
+                                <a href="https://play.google.com/store/books/details?id=B7yZEAAAQBAJ" target="_blank">
+                                    Google Play Books
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://apple.co/3WMBSmj" target="_blank">
+                                    Apple Books
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Link-uri sociale
+                        <ul class="book-details-list">
+                            <li>
+                                <a href="https://www.instagram.com/ESUPurpleBolt/" target="_blank">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/ESUPurpleBolt/" target="_blank">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/ESUPurpleBolt/" target="_blank">
+                                    Twitter
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+</div>
+</MainLayout>

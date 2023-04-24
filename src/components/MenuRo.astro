@@ -1,0 +1,75 @@
+---
+// Components
+import { Icon } from 'astro-icon';
+
+// Styles
+import '../styles/menu.css';
+
+// Props
+
+// Navigation active stylesheet
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<nav class="navbar">
+    <div class="nav">
+        <div class="navbar-logo">
+            <div class="logo">
+                <Icon name="logo"/>
+            </div>
+        </div>
+        <ul class="navbar-menu">
+            <li class="navbar-button">
+                <a class={currentPath === "ro-ro/" ? "active" : ""} href="/ro-ro/">
+                    <Icon class="icon" name="ri:home-8-fill"/>
+                    <span class="link-text home">Acasă</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "ro-ro/autori/" ? "active" : ""} href="/ro-ro/autori/">
+                    <Icon class="icon" name="mdi:account"/>
+                    <span class="link-text authors">Autori</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "ro-ro/cărți/" ? "active" : ""} href="/ro-ro/cărți/">
+                    <Icon class="icon" name="wpf:books"/>
+                    <span class="link-text books">Cărți</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "ro-ro/știri/" ? "active" : ""} href="/ro-ro/știri/">
+                    <Icon class="icon" name="zondicons:announcement"/>
+                    <span class="link-text news">Știri</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "ro-ro/despre-noi/" ? "active" : ""} href="/ro-ro/despre-noi/">
+                    <Icon class="icon" name="mdi:about"/>
+                    <span class="link-text about">Despre Noi</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "ro-ro/contactați-ne/" ? "active" : ""} href="/ro-ro/contactați-ne/">
+                    <Icon class="icon" name="ic:baseline-email"/>
+                    <span class="link-text contact">Contactați-ne</span>
+                </a>
+            </li>
+            <li class="navbar-button">
+                <a class={currentPath === "ro-ro/limbă/" ? "active" : ""} href="/ro-ro/limbă/">
+                    <Icon class="icon" name="ph:globe"/>
+                    <span class="link-text language">Limbă</span>
+                </a>
+            </li>
+        </ul>
+        <div class="theme-toggle">
+            <input type="checkbox" name="theme-toggle" id="checkbox" class="checkbox">
+            <label for="checkbox" class="label">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+    </div>
+</nav>

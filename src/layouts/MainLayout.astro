@@ -4,7 +4,7 @@ import Menu from '../components/Menu.astro';
 import Footer from '../components/Footer.astro';
 
 // Layout Props
-const { title, description, url, image, locale } = Astro.props;
+const { title, description, url, image, locale, alternateUrls } = Astro.props;
 
 ---
 
@@ -23,6 +23,11 @@ const { title, description, url, image, locale } = Astro.props;
         <script src="https://kit.fontawesome.com/a81ac619a8.js" crossorigin="anonymous"></script>
         <link rel="icon" href="/favicon.svg"/>
         <meta name="facebook-domain-verification" content="97lnfyqt41myn6zvpy0y09wrqrvha4" />
+        <link rel="canonical" href={url}>
+        <link rel="alternate" hreflang="en-gb" href={alternateUrls.en}>
+        <link rel="alternate" hreflang="en-us" href={alternateUrls.us}>
+        <link rel="alternate" hreflang="ro-ro" href={alternateUrls.ro}>
+        
     </head>
     <body id="body" data-theme="light">
         <Menu/>

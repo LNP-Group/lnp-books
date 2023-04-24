@@ -1,0 +1,95 @@
+---
+import MainLayout from "../../../../layouts/MainLayoutRo.astro";
+
+
+// SEO
+
+const title = "Doctor Hex | Universul Eteric de Supereroi";
+const description = "Un arheolog e blestemat cu puteri magice după ce a atins un artefact sacru.";
+const url = "https://books.lnp-group.com/ro-ro/cărți/ues/doctor-hex";
+const locale = "ro-RO";
+const image = "/images/doctor-hex.png";
+
+// CSS
+import '../../../../styles/global.css';
+import '../../../../styles/book.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+    alternateUrls={{
+		"en": "https://books.lnp-group.com/books/esu/doctor-hex",
+		"us": "https://books.lnp-group.com/en-us/books/esu/doctor-hex",
+		"ro": "https://books.lnp-group.com/ro-ro/cărți/ues/doctor-hex"
+	}}
+>
+<div class="books">
+	<div class="header">
+		<h1>Doctor Hex</h1>
+	</div>
+	<div id="main" class="main">
+		<div class="book">
+            <div class="book-cover">
+                <img src="/images/doctor-hex.png" alt="Purple Bolt promotional image" />
+            </div>
+            <div class="book-info">
+                <p><span class="info-box">Titlu:</span> Doctor Hex</p>
+                <p><span class="info-box">Autor:</span> <a href="/ro-ro/autori/cioarec-stelian">Cioarec Stelian</a></p>
+                <p><span class="info-box">Sinopsis:</span> <i>Un arheolog e blestemat cu puteri magice după ce a atins un artefact sacru.</i></p>
+                <p><span class="info-box">Dată de lansare:</span> AFA</p>
+                <p><span class="info-box">Nr. de Pagini:</span> AFA</p>
+                <p><span class="info-box">Serie:</span> <a href="/ro/cărți/ues">Universul Eteric de Supereroi</a></p>
+            </div>
+            <div class="book-details">
+                <h2>Personaje</h2>
+                <ul class="book-details-list">
+                    <li class="character">
+                        Doctor Hex
+                    </li>
+                </ul>
+                <h2>Locații</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Pământ
+                    </li>
+                </ul>
+                <h2>Obiecte</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Obiect Necunoscut
+                    </li>
+                </ul>
+                <h2>Link-uri</h2>
+                <ul class="book-details-list">
+                    <li>
+                        Pagini Sociale
+                        <ul class="book-details-list">
+                            <li>
+                                <a href="https://www.instagram.com/ESUDoctorHex/" target="_blank">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/ESUDoctorHex/" target="_blank">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/ESUDoctorHex/" target="_blank">
+                                    Twitter
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+</div>
+</MainLayout>

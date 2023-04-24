@@ -1,0 +1,80 @@
+---
+import MainLayout from "../../layouts/MainLayoutRo.astro";
+import HeroSection from "../../components/HeroSection.astro";
+
+const title = "Acasă";
+const description = "Bine ați venit pe website-ul oficial al LNP Books";
+const url = "https://books.lnp-group.com/ro-ro";
+const locale = "ro-RO";
+const image = "/images/esu-timeline.png";
+
+// CSS
+import '../../styles/global.css';
+import '../../styles/home.css';
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/",
+		"us": "https://books.lnp-group.com/en-us/",
+		"ro": "https://books.lnp-group.com/ro-ro/"
+	}}
+>
+	<div class="home">
+		<div class="header">
+			<h1>Acasă</h1>
+		</div>
+		<div id="main" class="main">
+			<HeroSection
+				title='Noul logo pentru Fulgerul Violet a fost dezvăluit'
+				description='Noul logo al Fulgerul Violet a fost dezvăluit astăzi.'
+				cta_url='/ro-ro/știri/noul-logo-fulgerul-violet-dezvăluit'
+				cta='Află mai multe'
+				image='/images/purple-bolt-hero.png'
+			/>
+		</div>
+		<div id="esu" class="esu">
+			<div class="headline">
+				<h2>ESU</h2>
+				<p>ESU este o nouă franciză de cărți publicată de LNP Books.</p>
+			</div>
+			<h3 class="phase">
+				Faza 1 <span class="phase-title">Etericii</span>
+			</h3>
+			<div class="book-list">
+				<div class="book">
+					<img src="/images/purple-bolt.png" alt="Purple Bolt">
+					<p class="caption">Fulgerul Violet</p>
+				</div>
+				<div class="book">
+					<img src="/images/thor.png" alt="Thor">
+					<p class="caption">Thor</p>
+				</div>
+				<div class="book">
+					<img src="/images/madame-wilhelmina.png" alt="Madame Wilhelmina">
+					<p class="caption">Madame Wilhelmina</p>
+				</div>
+				<div class="book">
+					<img src="/images/doctor-hex.png" alt="Doctor Hex">
+					<p class="caption">Doctor Hex</p>
+				</div>
+				<div class="book">
+					<img src="/images/the-ghost.png" alt="The Ghost">
+					<p class="caption">Fantoma</p>
+				</div>
+				<div class="book">
+					<img src="/images/the-ethereals.png" alt="The Ethereals">
+					<p class="caption">Etericii</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</MainLayout>
+
+

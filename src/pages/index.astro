@@ -5,8 +5,9 @@ import HeroSection from "../components/HeroSection.astro";
 const title = "Home";
 const description = "Welcome to the official website of LNP Books.";
 const url = "https://books.lnp-group.com";
-const locale = "en-US";
+const locale = "en-GB";
 const image = "/images/esu-timeline.png";
+
 
 // CSS
 import '../styles/global.css';
@@ -20,6 +21,11 @@ import '../styles/home.css';
 	url={url}
 	locale={locale}
 	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/",
+		"us": "https://books.lnp-group.com/en-us/",
+		"ro": "https://books.lnp-group.com/ro-ro/"
+	}}
 >
 	<div class="home">
 		<div class="header">

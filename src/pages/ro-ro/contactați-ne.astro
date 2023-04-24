@@ -1,0 +1,54 @@
+---
+import MainLayout from "../../layouts/MainLayoutRo.astro";
+
+const title = "Contactați-ne";
+const description = "Bine ați venit pe website-ul oficial al LNP Books";
+const url = "https://books.lnp-group.com/ro-ro/contactați-ne";
+const locale = "ro-RO";
+const image = "/images/esu-timeline.png";
+
+// CSS
+import '../../styles/global.css';
+import '../../styles/contact.css';
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/contact",
+		"us": "https://books.lnp-group.com/en-us/contact",
+		"ro": "https://books.lnp-group.com/ro-ro/contactați-ne"
+	}}
+>
+	<div class="contact">
+		<div class="home">
+			<div class="header">
+				<h1>Contactați-ne</h1>
+			</div>
+		</div>
+		<div class="form-wrapper">
+			<form
+				name="contact"
+				method="post"
+				data-netlify="true"
+				action="ro-ro/succes"
+			>
+				<label for="name">Nume</label>
+				<input type="text" name="name" placeholder="Prenume"/>
+				<label for="email">Email</label>
+				<input type="text" name="email" placeholder="Adresa de email"/>
+				<label for="subject">Subiect</label>
+				<input type="text" name="subject" placeholder="Subiectul"/>
+				<label for="message">Mesaj</label>
+				<input type="text" name="message" placeholder="Mesajul"/>
+				<button type="submit">Trimiteți mesajul</button>
+			</form>
+		</div>
+	</div>
+</MainLayout>

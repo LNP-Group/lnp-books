@@ -1,0 +1,40 @@
+---
+import MainLayout from "../../layouts/MainLayoutRo.astro";
+
+const title = "Vă mulțumim pentru mesaj!";
+const description = "Welcome to the official website of LNP Books.";
+const url = "https://books.lnp-group.com/ro-ro/succes/";
+const locale = "ro-RO";
+const image = "/images/esu-timeline.png";
+export const aboutSlug = "about";
+
+// CSS
+import '../styles/global.css';
+import '../styles/success.css'
+
+
+---
+
+<MainLayout
+	title={title}
+	description={description}
+	url={url}
+	locale={locale}
+	image={image}
+	alternateUrls={{
+		"en": "https://books.lnp-group.com/success/",
+		"us": "https://books.lnp-group.com/en-us/success/",
+		"ro": "https://books.lnp-group.com/ro-ro/succes/",
+	}}
+>
+<div class="success">
+	<div class="header">
+		<h1>Vă mulțumim!</h1>
+	</div>
+	<div id="main" class="main">
+		<p>Mesajul dvs. a fost trimis. Vom reveni cu un mesaj în curând.</p>
+        <a href="/ro-ro">Întoarceți-vă pe pagina principală</a>
+	</div>
+</div>
+
+</MainLayout>
