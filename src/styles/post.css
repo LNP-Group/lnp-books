@@ -54,3 +54,33 @@
         flex-direction: column;
     }
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+    border: 1px solid #ddd;
+}
+
+thead th {
+    text-align: center;
+    font-weight: bold;
+}
+
+tr td:first-child{
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: .5rem;
+}
+
+p a {
+    text-decoration: underline;
+}
